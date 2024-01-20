@@ -1,4 +1,4 @@
-# Quasar App (quasar-project)
+# Hackathon App (front)
 
 A Quasar Project
 
