@@ -21,6 +21,7 @@ def query(sql_query: str):
 
     # Fetch the results
     results = cursor.fetchall()
+    connection.commit()
 
     # # Print the results
     # for result in results:
