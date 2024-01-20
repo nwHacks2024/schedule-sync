@@ -1,8 +1,8 @@
 {
-  "name": "quasar-project",
+  "name": "front",
   "version": "0.0.1",
   "description": "A Quasar Project",
-  "productName": "Quasar App",
+  "productName": "Hackathon App",
   "author": "Carlos <carrlosaperrez@gmail.com>",
   "private": true,
   "scripts": {
