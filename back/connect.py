@@ -1,28 +1,33 @@
 import pymysql
 import config
 
-# Connect to the database
-connection = pymysql.connect(
-    host=config.host,
-    port=config.port,
-    user=config.user,
-    password=config.password,
-    database=config.database  # could also be planner
-)
 
-# Create a cursor object
-cursor = connection.cursor()
+# Connect to database and run sql query in database
+def query(sql_query: str):
+    # Connect to the database
+    connection = pymysql.connect(
+        host=config.host,
+        port=config.port,
+        user=config.user,
+        password=config.password,
+        database=config.database
+    )
 
-# Execute a SQL query
-cursor.execute('SELECT * FROM Degrees')
+    # Create a cursor object
+    cursor = connection.cursor()
 
-# Fetch the results
-results = cursor.fetchall()
+    # Execute a SQL query
+    cursor.execute(sql_query)
 
-# Print the results
-for result in results:
-    print(result)
+    # Fetch the results
+    results = cursor.fetchall()
 
-# Close the cursor and connection
-cursor.close()
-connection.close()
+    # # Print the results
+    # for result in results:
+    #     print(result)
+
+    # Close the cursor and connection
+    cursor.close()
+    connection.close()
+
+    return results
