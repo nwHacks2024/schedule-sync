@@ -2,10 +2,13 @@
 
 A Quasar Project
 
+##  Initialize Quasar CLI
+npm i -g @quasar/cli
+
+
 ## Install the dependencies
 ```bash
-yarn
-# or
+
 npm install
 ```
 
@@ -17,7 +20,6 @@ quasar dev
 
 ### Lint the files
 ```bash
-yarn lint
 # or
 npm run lint
 ```
@@ -25,7 +27,6 @@ npm run lint
 
 ### Format the files
 ```bash
-yarn format
 # or
 npm run format
 ```
