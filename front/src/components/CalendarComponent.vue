@@ -42,7 +42,7 @@ export default defineComponent({
 
           return eventDates.map((date) => ({
             start: `${date} ${section.startTime}`,
-            end: `${date} 16:00`, // You need to define endTime in your API response
+            end: `${date} ${section.endTime}`, // You need to define endTime in your API response
             title: section.courseName,
             class: 'me'
           }));
