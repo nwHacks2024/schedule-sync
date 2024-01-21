@@ -328,7 +328,7 @@ def degreeinfo():
 
     return jsonify(dictionary), 200
 
-@app.route('/courses', methods=['POST'])
+@app.route('/api/courses', methods=['POST'])
 def courses():
     data = request.get_json()
     if 'department' not in data:
