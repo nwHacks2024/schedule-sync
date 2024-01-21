@@ -43,7 +43,7 @@ export default defineComponent({
 
           return eventDates.map((date) => ({
             start: `${date} ${section.startTime}`,
-            end: `${date} ${section.startTime}`, // You need to define endTime in your API response
+            end: `${date} ${section.endTime}`, // You need to define endTime in your API response
             title: section.courseName,
             class: 'me'
           }));
@@ -51,9 +51,6 @@ export default defineComponent({
 
         // Append newEvents to the existing events array
         this.events = this.events.concat(newEvents);
-
-        console.log("finished processing");
-        console.log(this.events);
       } catch (error) {
         console.error("Error fetching sections:", error);
       }
@@ -73,7 +70,7 @@ export default defineComponent({
 
           return eventDates.map((date) => ({
             start: `${date} ${section.startTime}`,
-            end: `${date} 16:00`, // You need to define endTime in your API response
+            end: `${date} ${section.endTime}`, // You need to define endTime in your API response
             title: section.courseName,
             class: 'friend'
           }));
@@ -81,9 +78,6 @@ export default defineComponent({
 
         // Append newEvents to the existing events array
         this.events = this.events.concat(newEvents);
-
-        console.log("finished processing");
-        console.log(this.events);
       } catch (error) {
         console.error("Error fetching sections:", error);
       }
