@@ -33,8 +33,8 @@ export default {
   methods: {
     async fetchUserProfile() {
       try {
-        const response = await axios.post('/api/userprofile', {
-          username: 'test1',
+        const response = await axios.post('/userprofile', {
+          username: 'dfroberg',
         });
         const userData = response.data;
 
