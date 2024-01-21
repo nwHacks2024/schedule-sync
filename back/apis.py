@@ -526,6 +526,8 @@ def addcourse():
     section = data['section']
     term = "2023W2"
 
+    section = str(section)
+
     if (section[0] == '1' or section[1] == '1'):
         term = "2023W1"
 
