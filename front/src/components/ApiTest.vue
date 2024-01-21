@@ -1,30 +1,30 @@
 <template>
     <div>
-      <h1>API Response: {{ apiResponse }}</h1>
-      <q-btn @click="fetchData" label="Fetch Data" />
+        <h6>API Response: {{ apiResponse }}</h6>
+        <q-btn @click="fetchUserInfo" label="Fetch Data" />
     </div>
-  </template>
+</template>
   
-  <script>
-  import axios from 'axios';
-  
-  export default {
+<script>
+import axios from 'axios';
+import userData from '/../../bdec/mock_data/getUserInfo.json'
+
+export default {
     data() {
-      return {
-        apiResponse: null,
-      };
+        return {
+            apiResponse: null,
+        };
     },
     methods: {
-      async fetchData() {
-        try {
-          const response = await axios.get('http://localhost:6543/mock_data');
-          this.apiResponse = response.data;
-          console.log('The response: ' + this.apiResponse)
-        } catch (error) {
-          console.error('Error fetching data:', error);
-        }
-      },
+        async fetchUserInfo() {
+                            try {
+                                this.apiResponse = userData;
+                                console.log('The response:', this.apiResponse);
+                            } catch (error) {
+                                console.error('Error fetching user info:', error);
+                            }
+                        },
     },
-  };
-  </script>
+};
+</script>
   
