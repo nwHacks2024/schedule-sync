@@ -2,7 +2,7 @@ import json
 from datetime import datetime, timedelta
 from flask import Flask, request, jsonify
 import connect
-import register
+import register as reg
 
 app = Flask(__name__)
 
@@ -546,9 +546,10 @@ def register():
         last_name = data['lastName']
 
     try:
-        register.register_user(data['username'], data['password'], f'{first_name}', f'{last_name}')
+        reg.register_user(data['username'], data['password'], f'{first_name}', f'{last_name}')
         return jsonify({'success': 'User registered'}), 200
-    except:
+    except Exception as e:
+        print(e)
         return jsonify({'error': 'Could not register user'}), 400
 
 @app.route('/api/addfriend', methods=['POST'])

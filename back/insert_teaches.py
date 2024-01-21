@@ -10,6 +10,7 @@ def generate_insert_queries(section_data):
         section_num = section.get('section_num')
         term = section_num[0]
         prof_name = section.get('name')
+        prof_name = prof_name.title()
         prof_dept = "Computer Science"
         if (term != '1' and term != '2'):
             continue
@@ -32,7 +33,7 @@ def read_json_file(file_path):
 
 if __name__ == "__main__":
     # Replace 'your_sections_file.json' with the actual path to your JSON file for Sections
-    json_file_path = '../data/ubc_courses_data/all_section_list.json'
+    json_file_path = '../data/ubc_courses_data/all_teaching_list.json'
 
     # Read JSON data from the file
     json_data = read_json_file(json_file_path)
@@ -43,8 +44,9 @@ if __name__ == "__main__":
     # Replace 'your_database' with the actual connect object
     for query in insert_queries:
         try:
-            print(query)
-        except:
-            pass
+            connect.query(query)
+        except Exception as e:
+            print(e)
+            print("FAILED QUERY", query)
 
 
