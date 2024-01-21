@@ -5,7 +5,7 @@
     :disable-views="['years', 'year', 'month']"
     :events="events"
     :min-event-width="minEventWidth"
-    style="height: 600px"
+    style="height: 600px; width: 1200px"
   />
 </template>
 
