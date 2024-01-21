@@ -1,0 +1,456 @@
+{
+  "client:root": {
+    "__id": "client:root",
+    "__typename": "__Root",
+    "newSearch": {
+      "__ref": "client:root:newSearch"
+    }
+  },
+  "client:root:newSearch": {
+    "__id": "client:root:newSearch",
+    "__typename": "newSearch",
+    "teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"})": {
+      "__ref": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"})"
+    },
+    "__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"})": {
+      "__ref": "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"})"
+    }
+  },
+  "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"})": {
+    "__id": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"})",
+    "__typename": "TeacherSearchConnectionConnection",
+    "didFallback": false,
+    "edges": {
+      "__refs": [
+        "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:0",
+        "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:1",
+        "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:2",
+        "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:3",
+        "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:4",
+        "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:5",
+        "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:6",
+        "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:7"
+      ]
+    },
+    "pageInfo": {
+      "__ref": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):pageInfo"
+    },
+    "resultCount": 9,
+    "filters": {
+      "__refs": [
+        "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):filters:0"
+      ]
+    }
+  },
+  "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:0": {
+    "__id": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:0",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
+    "node": {
+      "__ref": "VGVhY2hlci01Nzg1Nzg="
+    }
+  },
+  "VGVhY2hlci01Nzg1Nzg=": {
+    "__id": "VGVhY2hlci01Nzg1Nzg=",
+    "__typename": "Teacher",
+    "id": "VGVhY2hlci01Nzg1Nzg=",
+    "legacyId": 578578,
+    "avgRating": 4.1,
+    "numRatings": 24,
+    "wouldTakeAgainPercent": -1,
+    "avgDifficulty": 2.9,
+    "department": "Writing",
+    "school": {
+      "__ref": "U2Nob29sLTE4NDE="
+    },
+    "firstName": "Jeffrey",
+    "lastName": "Schultz",
+    "isSaved": false
+  },
+  "U2Nob29sLTE4NDE=": {
+    "__id": "U2Nob29sLTE4NDE=",
+    "__typename": "School",
+    "name": "Chemeketa Community College",
+    "id": "U2Nob29sLTE4NDE="
+  },
+  "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:1": {
+    "__id": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:1",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
+    "node": {
+      "__ref": "VGVhY2hlci03Njk3ODg="
+    }
+  },
+  "VGVhY2hlci03Njk3ODg=": {
+    "__id": "VGVhY2hlci03Njk3ODg=",
+    "__typename": "Teacher",
+    "id": "VGVhY2hlci03Njk3ODg=",
+    "legacyId": 769788,
+    "avgRating": 3.4,
+    "numRatings": 8,
+    "wouldTakeAgainPercent": -1,
+    "avgDifficulty": 1.9,
+    "department": "Finance",
+    "school": {
+      "__ref": "U2Nob29sLTIxNw=="
+    },
+    "firstName": "Jeff",
+    "lastName": "Schultz",
+    "isSaved": false
+  },
+  "U2Nob29sLTIxNw==": {
+    "__id": "U2Nob29sLTIxNw==",
+    "__typename": "School",
+    "name": "Christian Brothers University",
+    "id": "U2Nob29sLTIxNw=="
+  },
+  "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:2": {
+    "__id": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:2",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjI=",
+    "node": {
+      "__ref": "VGVhY2hlci04OTQ5ODU="
+    }
+  },
+  "VGVhY2hlci04OTQ5ODU=": {
+    "__id": "VGVhY2hlci04OTQ5ODU=",
+    "__typename": "Teacher",
+    "id": "VGVhY2hlci04OTQ5ODU=",
+    "legacyId": 894985,
+    "avgRating": 3.5,
+    "numRatings": 36,
+    "wouldTakeAgainPercent": 0,
+    "avgDifficulty": 2.9,
+    "department": "Biology",
+    "school": {
+      "__ref": "U2Nob29sLTEzNzA2"
+    },
+    "firstName": "Jeffrey",
+    "lastName": "Schultz",
+    "isSaved": false
+  },
+  "U2Nob29sLTEzNzA2": {
+    "__id": "U2Nob29sLTEzNzA2",
+    "__typename": "School",
+    "name": "Lone Star College (all)",
+    "id": "U2Nob29sLTEzNzA2"
+  },
+  "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:3": {
+    "__id": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:3",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjM=",
+    "node": {
+      "__ref": "VGVhY2hlci0xNzQxNDEw"
+    }
+  },
+  "VGVhY2hlci0xNzQxNDEw": {
+    "__id": "VGVhY2hlci0xNzQxNDEw",
+    "__typename": "Teacher",
+    "id": "VGVhY2hlci0xNzQxNDEw",
+    "legacyId": 1741410,
+    "avgRating": 4.7,
+    "numRatings": 3,
+    "wouldTakeAgainPercent": 100,
+    "avgDifficulty": 3,
+    "department": "English",
+    "school": {
+      "__ref": "U2Nob29sLTI4NjE="
+    },
+    "firstName": "Jeffrey",
+    "lastName": "Schultz",
+    "isSaved": false
+  },
+  "U2Nob29sLTI4NjE=": {
+    "__id": "U2Nob29sLTI4NjE=",
+    "__typename": "School",
+    "name": "Southwestern Oregon Community College",
+    "id": "U2Nob29sLTI4NjE="
+  },
+  "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:4": {
+    "__id": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:4",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjQ=",
+    "node": {
+      "__ref": "VGVhY2hlci0yNzE2MDU0"
+    }
+  },
+  "VGVhY2hlci0yNzE2MDU0": {
+    "__id": "VGVhY2hlci0yNzE2MDU0",
+    "__typename": "Teacher",
+    "id": "VGVhY2hlci0yNzE2MDU0",
+    "legacyId": 2716054,
+    "avgRating": 1,
+    "numRatings": 1,
+    "wouldTakeAgainPercent": 50,
+    "avgDifficulty": 5,
+    "department": "Film",
+    "school": {
+      "__ref": "U2Nob29sLTQwMTk="
+    },
+    "firstName": "Jeff",
+    "lastName": "Schultz",
+    "isSaved": false
+  },
+  "U2Nob29sLTQwMTk=": {
+    "__id": "U2Nob29sLTQwMTk=",
+    "__typename": "School",
+    "name": "British Columbia Institute of Technology",
+    "id": "U2Nob29sLTQwMTk="
+  },
+  "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:5": {
+    "__id": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:5",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjU=",
+    "node": {
+      "__ref": "VGVhY2hlci0yNzE2MDU3"
+    }
+  },
+  "VGVhY2hlci0yNzE2MDU3": {
+    "__id": "VGVhY2hlci0yNzE2MDU3",
+    "__typename": "Teacher",
+    "id": "VGVhY2hlci0yNzE2MDU3",
+    "legacyId": 2716057,
+    "avgRating": 1,
+    "numRatings": 1,
+    "wouldTakeAgainPercent": 0,
+    "avgDifficulty": 5,
+    "department": "Film",
+    "school": {
+      "__ref": "U2Nob29sLTE0ODI="
+    },
+    "firstName": "Jeff",
+    "lastName": "Schultz",
+    "isSaved": false
+  },
+  "U2Nob29sLTE0ODI=": {
+    "__id": "U2Nob29sLTE0ODI=",
+    "__typename": "School",
+    "name": "Simon Fraser University",
+    "id": "U2Nob29sLTE0ODI="
+  },
+  "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:6": {
+    "__id": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:6",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjY=",
+    "node": {
+      "__ref": "VGVhY2hlci0yODgyMDc="
+    }
+  },
+  "VGVhY2hlci0yODgyMDc=": {
+    "__id": "VGVhY2hlci0yODgyMDc=",
+    "__typename": "Teacher",
+    "id": "VGVhY2hlci0yODgyMDc=",
+    "legacyId": 288207,
+    "avgRating": 4.1,
+    "numRatings": 59,
+    "wouldTakeAgainPercent": 75,
+    "avgDifficulty": 2.6,
+    "department": "History",
+    "school": {
+      "__ref": "U2Nob29sLTIzOTc="
+    },
+    "firstName": "Jeffrey",
+    "lastName": "Schultz",
+    "isSaved": false
+  },
+  "U2Nob29sLTIzOTc=": {
+    "__id": "U2Nob29sLTIzOTc=",
+    "__typename": "School",
+    "name": "Luzerne County Community College",
+    "id": "U2Nob29sLTIzOTc="
+  },
+  "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:7": {
+    "__id": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:7",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjc=",
+    "node": {
+      "__ref": "VGVhY2hlci0xMjAxMTkx"
+    }
+  },
+  "VGVhY2hlci0xMjAxMTkx": {
+    "__id": "VGVhY2hlci0xMjAxMTkx",
+    "__typename": "Teacher",
+    "id": "VGVhY2hlci0xMjAxMTkx",
+    "legacyId": 1201191,
+    "avgRating": 4.8,
+    "numRatings": 40,
+    "wouldTakeAgainPercent": 100,
+    "avgDifficulty": 2.9,
+    "department": "English",
+    "school": {
+      "__ref": "U2Nob29sLTc1OQ=="
+    },
+    "firstName": "Jeffrey",
+    "lastName": "Schultz",
+    "isSaved": false
+  },
+  "U2Nob29sLTc1OQ==": {
+    "__id": "U2Nob29sLTc1OQ==",
+    "__typename": "School",
+    "name": "Pepperdine University",
+    "id": "U2Nob29sLTc1OQ=="
+  },
+  "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):pageInfo": {
+    "__id": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):pageInfo",
+    "__typename": "PageInfo",
+    "hasNextPage": true,
+    "endCursor": "YXJyYXljb25uZWN0aW9uOjc="
+  },
+  "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):filters:0": {
+    "__id": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):filters:0",
+    "__typename": "Filter",
+    "field": "teacherdepartment_s",
+    "options": {
+      "__refs": [
+        "RGVwYXJ0bWVudC02",
+        "RGVwYXJ0bWVudC02OTA=",
+        "RGVwYXJ0bWVudC0xOA==",
+        "RGVwYXJ0bWVudC0yMA==",
+        "RGVwYXJ0bWVudC0yMQ==",
+        "RGVwYXJ0bWVudC0yNw==",
+        "RGVwYXJ0bWVudC01NA=="
+      ]
+    }
+  },
+  "RGVwYXJ0bWVudC02": {
+    "__id": "RGVwYXJ0bWVudC02",
+    "__typename": "FilterOption",
+    "value": "biology",
+    "id": "RGVwYXJ0bWVudC02"
+  },
+  "RGVwYXJ0bWVudC02OTA=": {
+    "__id": "RGVwYXJ0bWVudC02OTA=",
+    "__typename": "FilterOption",
+    "value": "communication studies",
+    "id": "RGVwYXJ0bWVudC02OTA="
+  },
+  "RGVwYXJ0bWVudC0xOA==": {
+    "__id": "RGVwYXJ0bWVudC0xOA==",
+    "__typename": "FilterOption",
+    "value": "english",
+    "id": "RGVwYXJ0bWVudC0xOA=="
+  },
+  "RGVwYXJ0bWVudC0yMA==": {
+    "__id": "RGVwYXJ0bWVudC0yMA==",
+    "__typename": "FilterOption",
+    "value": "film",
+    "id": "RGVwYXJ0bWVudC0yMA=="
+  },
+  "RGVwYXJ0bWVudC0yMQ==": {
+    "__id": "RGVwYXJ0bWVudC0yMQ==",
+    "__typename": "FilterOption",
+    "value": "finance",
+    "id": "RGVwYXJ0bWVudC0yMQ=="
+  },
+  "RGVwYXJ0bWVudC0yNw==": {
+    "__id": "RGVwYXJ0bWVudC0yNw==",
+    "__typename": "FilterOption",
+    "value": "history",
+    "id": "RGVwYXJ0bWVudC0yNw=="
+  },
+  "RGVwYXJ0bWVudC01NA==": {
+    "__id": "RGVwYXJ0bWVudC01NA==",
+    "__typename": "FilterOption",
+    "value": "writing",
+    "id": "RGVwYXJ0bWVudC01NA=="
+  },
+  "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"})": {
+    "__id": "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"})",
+    "__typename": "TeacherSearchConnectionConnection",
+    "__connection_next_edge_index": 8,
+    "didFallback": false,
+    "edges": {
+      "__refs": [
+        "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:0",
+        "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:1",
+        "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:2",
+        "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:3",
+        "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:4",
+        "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:5",
+        "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:6",
+        "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:7"
+      ]
+    },
+    "pageInfo": {
+      "__ref": "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):pageInfo"
+    },
+    "resultCount": 9,
+    "filters": {
+      "__refs": [
+        "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):filters:0"
+      ]
+    }
+  },
+  "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:0": {
+    "__id": "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:0",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
+    "node": {
+      "__ref": "VGVhY2hlci01Nzg1Nzg="
+    }
+  },
+  "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:1": {
+    "__id": "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:1",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
+    "node": {
+      "__ref": "VGVhY2hlci03Njk3ODg="
+    }
+  },
+  "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:2": {
+    "__id": "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:2",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjI=",
+    "node": {
+      "__ref": "VGVhY2hlci04OTQ5ODU="
+    }
+  },
+  "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:3": {
+    "__id": "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:3",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjM=",
+    "node": {
+      "__ref": "VGVhY2hlci0xNzQxNDEw"
+    }
+  },
+  "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:4": {
+    "__id": "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:4",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjQ=",
+    "node": {
+      "__ref": "VGVhY2hlci0yNzE2MDU0"
+    }
+  },
+  "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:5": {
+    "__id": "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:5",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjU=",
+    "node": {
+      "__ref": "VGVhY2hlci0yNzE2MDU3"
+    }
+  },
+  "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:6": {
+    "__id": "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:6",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjY=",
+    "node": {
+      "__ref": "VGVhY2hlci0yODgyMDc="
+    }
+  },
+  "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:7": {
+    "__id": "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):edges:7",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjc=",
+    "node": {
+      "__ref": "VGVhY2hlci0xMjAxMTkx"
+    }
+  },
+  "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):pageInfo": {
+    "__id": "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"jeff schultz\"}):pageInfo",
+    "__typename": "PageInfo",
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "endCursor": "YXJyYXljb25uZWN0aW9uOjc=",
+    "startCursor": null
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "client:root": {
+    "__id": "client:root",
+    "__typename": "__Root",
+    "newSearch": {
+      "__ref": "client:root:newSearch"
+    }
+  },
+  "client:root:newSearch": {
+    "__id": "client:root:newSearch",
+    "__typename": "newSearch",
+    "teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"})": {
+      "__ref": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"})"
+    },
+    "__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"})": {
+      "__ref": "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"})"
+    }
+  },
+  "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"})": {
+    "__id": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"})",
+    "__typename": "TeacherSearchConnectionConnection",
+    "didFallback": false,
+    "edges": {
+      "__refs": [
+        "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):edges:0",
+        "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):edges:1"
+      ]
+    },
+    "pageInfo": {
+      "__ref": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):pageInfo"
+    },
+    "resultCount": 2,
+    "filters": {
+      "__refs": [
+        "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):filters:0"
+      ]
+    }
+  },
+  "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):edges:0": {
+    "__id": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):edges:0",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
+    "node": {
+      "__ref": "VGVhY2hlci01MTEwMDc="
+    }
+  },
+  "VGVhY2hlci01MTEwMDc=": {
+    "__id": "VGVhY2hlci01MTEwMDc=",
+    "__typename": "Teacher",
+    "id": "VGVhY2hlci01MTEwMDc=",
+    "legacyId": 511007,
+    "avgRating": 3.9,
+    "numRatings": 77,
+    "wouldTakeAgainPercent": 100,
+    "avgDifficulty": 3.4,
+    "department": "Computer Science",
+    "school": {
+      "__ref": "U2Nob29sLTExMTI="
+    },
+    "firstName": "Cinda",
+    "lastName": "Heeren",
+    "isSaved": false
+  },
+  "U2Nob29sLTExMTI=": {
+    "__id": "U2Nob29sLTExMTI=",
+    "__typename": "School",
+    "name": "University Of Illinois at Urbana - Champaign",
+    "id": "U2Nob29sLTExMTI="
+  },
+  "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):edges:1": {
+    "__id": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):edges:1",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
+    "node": {
+      "__ref": "VGVhY2hlci0yMzAyNTI3"
+    }
+  },
+  "VGVhY2hlci0yMzAyNTI3": {
+    "__id": "VGVhY2hlci0yMzAyNTI3",
+    "__typename": "Teacher",
+    "id": "VGVhY2hlci0yMzAyNTI3",
+    "legacyId": 2302527,
+    "avgRating": 4.3,
+    "numRatings": 55,
+    "wouldTakeAgainPercent": 90.3846,
+    "avgDifficulty": 2.8,
+    "department": "Computer Science",
+    "school": {
+      "__ref": "U2Nob29sLTE0MTM="
+    },
+    "firstName": "Cinda",
+    "lastName": "Heeren",
+    "isSaved": false
+  },
+  "U2Nob29sLTE0MTM=": {
+    "__id": "U2Nob29sLTE0MTM=",
+    "__typename": "School",
+    "name": "University of British Columbia",
+    "id": "U2Nob29sLTE0MTM="
+  },
+  "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):pageInfo": {
+    "__id": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):pageInfo",
+    "__typename": "PageInfo",
+    "hasNextPage": false,
+    "endCursor": "YXJyYXljb25uZWN0aW9uOjE="
+  },
+  "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):filters:0": {
+    "__id": "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):filters:0",
+    "__typename": "Filter",
+    "field": "teacherdepartment_s",
+    "options": {
+      "__refs": [
+        "RGVwYXJ0bWVudC0xMQ=="
+      ]
+    }
+  },
+  "RGVwYXJ0bWVudC0xMQ==": {
+    "__id": "RGVwYXJ0bWVudC0xMQ==",
+    "__typename": "FilterOption",
+    "value": "computer science",
+    "id": "RGVwYXJ0bWVudC0xMQ=="
+  },
+  "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"})": {
+    "__id": "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"})",
+    "__typename": "TeacherSearchConnectionConnection",
+    "__connection_next_edge_index": 2,
+    "didFallback": false,
+    "edges": {
+      "__refs": [
+        "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):edges:0",
+        "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):edges:1"
+      ]
+    },
+    "pageInfo": {
+      "__ref": "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):pageInfo"
+    },
+    "resultCount": 2,
+    "filters": {
+      "__refs": [
+        "client:root:newSearch:teachers(after:\"\",first:8,query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):filters:0"
+      ]
+    }
+  },
+  "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):edges:0": {
+    "__id": "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):edges:0",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
+    "node": {
+      "__ref": "VGVhY2hlci01MTEwMDc="
+    }
+  },
+  "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):edges:1": {
+    "__id": "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):edges:1",
+    "__typename": "TeacherSearchConnectionEdge",
+    "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
+    "node": {
+      "__ref": "VGVhY2hlci0yMzAyNTI3"
+    }
+  },
+  "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):pageInfo": {
+    "__id": "client:root:newSearch:__TeacherSearchPagination_teachers_connection(query:{\"fallback\":true,\"schoolID\":\"\",\"text\":\"cinda heeren\"}):pageInfo",
+    "__typename": "PageInfo",
+    "hasNextPage": false,
+    "hasPreviousPage": false,
+    "endCursor": "YXJyYXljb25uZWN0aW9uOjE=",
+    "startCursor": null
+  }
+}
