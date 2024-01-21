@@ -1,73 +1,62 @@
 <template>
-    <q-layout view="hHh lpR fFf">
-  
-      <q-header elevated class="bg-primary text-white" height-hint="98">
-        <q-toolbar>
-          <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
-  
-          <q-toolbar-title>
-            <q-avatar>
-              <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
-            </q-avatar>
-            Title
-          </q-toolbar-title>
-  
-          <q-btn dense flat round icon="menu" @click="toggleRightDrawer" />
-        </q-toolbar>
-  
-        <q-tabs align="left">
-          <q-route-tab to="/page1" label="Page One" />
-          <q-route-tab to="/page2" label="Page Two" />
-          <q-route-tab to="/page3" label="Page Three" />
-        </q-tabs>
-      </q-header>
-  
-      <q-drawer show-if-above v-model="leftDrawerOpen" side="left" bordered>
-        <!-- drawer content -->
-      </q-drawer>
-  
-      <q-drawer show-if-above v-model="rightDrawerOpen" side="right" bordered>
-        <!-- drawer content -->
-      </q-drawer>
-  
-      <q-page-container>
-        <router-view />
-      </q-page-container>
-  
-      <q-footer elevated class="bg-grey-8 text-white">
-        <q-toolbar>
-          <q-toolbar-title>
-            <q-avatar>
-              <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
-            </q-avatar>
-            <div>Title</div>
-          </q-toolbar-title>
-        </q-toolbar>
-      </q-footer>
-  
-    </q-layout>
-  </template>
-  
-  <script>
-  import { ref } from 'vue'
-  
-  export default {
-    setup () {
-      const leftDrawerOpen = ref(false)
-      const rightDrawerOpen = ref(false)
-  
-      return {
-        leftDrawerOpen,
-        toggleLeftDrawer () {
-          leftDrawerOpen.value = !leftDrawerOpen.value
-        },
-  
-        rightDrawerOpen,
-        toggleRightDrawer () {
-          rightDrawerOpen.value = !rightDrawerOpen.value
-        }
-      }
+  <div class="container">
+    <div v-if="!isButtonClicked">
+      <button class='user-button' @click="showComponent('existing')">Existing User</button>
+      <button class='user-button' @click="showComponent('new')">New User</button>
+    </div>
+    <LoginCard v-if="isButtonClicked && !isNewUser" />
+    <RegisterCard v-if="isButtonClicked && isNewUser" />
+    <button v-if="isButtonClicked" class="user-button" @click="goBack">Back</button>
+  </div>
+</template>
+
+<script>
+import LoginCard from '../components/LoginCard.vue'
+import RegisterCard from '../components/RegisterCard.vue'
+export default {
+  components: {
+    LoginCard,
+    RegisterCard
+  },
+  data() {
+    return {
+      isNewUser: false,
+      isButtonClicked: false
+    }
+  },
+  methods: {
+    showComponent(type) {
+      this.isNewUser = type === 'new';
+      this.isButtonClicked = true;
+    },
+    goBack() {
+      this.isButtonClicked = false;
     }
   }
-  </script>
-  
+};
+</script>
+
+<style>
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+.user-button {
+  padding: 50px;
+  font-size: 20px;
+  color: white;
+  background-color: #4CAF50; /* Change this to your preferred color */
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.user-button:hover {
+  background-color: #45a049; /* Change this to your preferred hover color */
+}
+</style>
