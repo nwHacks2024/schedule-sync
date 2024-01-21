@@ -1,6 +1,7 @@
 import bcrypt
 import connect
 
+
 def register_user(username, password, firstName, lastName):
     # Generate a random salt
     salt = bcrypt.gensalt()
@@ -10,7 +11,10 @@ def register_user(username, password, firstName, lastName):
     salt_str = salt.decode('utf-8')
     hashed_password_str = hashed_password.decode('utf-8')
 
-    query_string = f"INSERT INTO Students VALUES('{username}', '{firstName}', '{lastName}', NULL, NULL, '{hashed_password_str}', '{salt_str}')"
+    query_string = (f"INSERT INTO Students VALUES('{username}',"
+                    + (f" '{firstName}'," if firstName else " NULL,")
+                    + (f" '{lastName}'," if lastName else " NULL,")
+                    + f" NULL, NULL, '{hashed_password_str}', '{salt_str}')")
     print(query_string)
 
     print(connect.query(query_string))
@@ -27,9 +31,3 @@ def authenticate_user(username, password):
         return True
     else:
         return False
-
-
-login = authenticate_user("YourMom", "Password")
-login2 = authenticate_user("YourMom", "Password1")
-print(login)
-print(login2)
