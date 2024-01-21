@@ -2,9 +2,9 @@
   <vue-cal
     :time-from="8 * 60"
     :time-to="23 * 60"
-    events-count-on-year-view
-    :events="events"
     :disable-views="['years', 'year', 'month']"
+    :events="events"
+    :min-event-width="minEventWidth"
     style="height: 600px"
   />
 </template>
@@ -20,11 +20,12 @@ export default defineComponent({
     VueCal,
   },
   data: () => ({
+    minEventWidth: 0,
     events: [],
   }),
   mounted() {
     this.fetchSections();
-
+    this.fetchSectionsFriend();
   },
   methods: {
     async fetchSections() {
@@ -36,7 +37,7 @@ export default defineComponent({
         console.log(sections);
 
         // Process API response and convert it into events format
-        this.events = sections.flatMap((section) => {
+        const newEvents = sections.flatMap((section) => {
           // Assuming each section has an 'events' key with a list of event dates
           const eventDates = section.events || [];
 
@@ -48,6 +49,39 @@ export default defineComponent({
           }));
         });
 
+        // Append newEvents to the existing events array
+        this.events = this.events.concat(newEvents);
+
+        console.log("finished processing");
+        console.log(this.events);
+      } catch (error) {
+        console.error("Error fetching sections:", error);
+      }
+    },
+    async fetchSectionsFriend() {
+      try {
+        const response = await axios.post("/api/registeredcourses", {
+          username: "ebuchanan",
+        });
+        const sections = response.data.results;
+        console.log(sections);
+
+        // Process API response and convert it into events format
+        const newEvents = sections.flatMap((section) => {
+          // Assuming each section has an 'events' key with a list of event dates
+          const eventDates = section.events || [];
+
+          return eventDates.map((date) => ({
+            start: `${date} ${section.startTime}`,
+            end: `${date} 16:00`, // You need to define endTime in your API response
+            title: section.courseName,
+            class: 'friend'
+          }));
+        });
+
+        // Append newEvents to the existing events array
+        this.events = this.events.concat(newEvents);
+
         console.log("finished processing");
         console.log(this.events);
       } catch (error) {
@@ -57,6 +91,7 @@ export default defineComponent({
   },
 });
 </script>
+
 <style>
 .vuecal__event.me {
   background-color: rgba(253, 156, 66, 0.9);
