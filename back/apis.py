@@ -197,7 +197,11 @@ def registeredcourses():
     results = connect.query(sql_query)
 
     if not results:
-        return jsonify({'error': 'No courses found for the given username and term'}), 404
+        response_dict = {
+            'count': 0,
+            'results': []
+        }
+        return jsonify(response_dict), 200
 
     # Define the keys for the JSON response
     keys = ['term', 'section', 'courseNum', 'courseDept', 'daysOfWeek', 'startTime', 'endTime']
@@ -225,7 +229,7 @@ def registeredcourses():
 
     return jsonify(response_dict)
 
-@app.route('/login', methods=['POST'])
+@app.route('/api/login', methods=['POST'])
 def login():
     data = request.get_json() #json body
     if 'username' not in data:
@@ -245,7 +249,7 @@ def login():
     else:
         return jsonify({'error': 'Invalid credentials'}), 401
 
-@app.route('/users', methods=['POST'])
+@app.route('/api/users', methods=['POST'])
 def users():
     data = request.get_json()
     if 'username' not in data:
@@ -284,7 +288,7 @@ def users():
 
     return jsonify(dictionary), 200
 
-@app.route('/degreeinfo', methods=['POST'])
+@app.route('/api/degreeinfo', methods=['POST'])
 def degreeinfo():
     data = request.get_json()
     if 'username' not in data:
@@ -365,7 +369,7 @@ def courses():
 
     return jsonify(dictionary), 200
 
-@app.route('/sections', methods=['POST'])
+@app.route('/api/sections', methods=['POST'])
 def sections():
     data = request.get_json()
     if 'courseNum' not in data:
@@ -406,7 +410,7 @@ def sections():
     return jsonify(dictionary), 200
 
 
-@app.route('/sectioninfo', methods=['POST'])
+@app.route('/api/sectioninfo', methods=['POST'])
 def sectioninfo():
     data = request.get_json()
     if 'courseNum' not in data:
@@ -438,7 +442,7 @@ SELECT
     Sections.courseDept
 FROM
     Teaches
-INNER JOIN
+RIGHT OUTER JOIN
     Sections ON Teaches.term = Sections.term
               AND Teaches.section = Sections.section
               AND Teaches.courseNum = Sections.courseNum
@@ -472,7 +476,7 @@ WHERE
 
     return jsonify(data_dict), 200
 
-@app.route('/removecourse', methods=['DELETE'])
+@app.route('/api/removecourse', methods=['DELETE'])
 def removecourse():
     data = request.get_json() #json body
     if 'username' not in data:
@@ -491,7 +495,7 @@ def removecourse():
     except:
         return jsonify({'error': 'Invalid course deletion'}), 400
 
-@app.route('/removefriend', methods=['DELETE'])
+@app.route('/api/removefriend', methods=['DELETE'])
 def removefriend():
     data = request.get_json() #json body
     if 'username' not in data:
@@ -506,7 +510,7 @@ def removefriend():
     except:
         return jsonify({'error': 'Could not remove friend'}), 400
 
-@app.route('/addcourse', methods=['POST'])
+@app.route('/api/addcourse', methods=['POST'])
 def addcourse():
     data = request.get_json() #json body
     if 'username' not in data:
@@ -527,7 +531,7 @@ def addcourse():
         return jsonify({'error': 'Invalid course addition'}), 400
 
 
-@app.route('/register', methods=['POST'])
+@app.route('/api/register', methods=['POST'])
 def register():
     data = request.get_json() #json body
     first_name = ""
@@ -547,7 +551,7 @@ def register():
     except:
         return jsonify({'error': 'Could not register user'}), 400
 
-@app.route('/addfriend', methods=['POST'])
+@app.route('/api/addfriend', methods=['POST'])
 def addfriend():
     data = request.get_json() #json body
     if 'username' not in data:

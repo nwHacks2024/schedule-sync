@@ -1,0 +1,428 @@
+[
+  {
+    "name": "OLUWAKEMI OLA",
+    "numRatings": "29",
+    "avgRating": "4.6",
+    "avgDifficulty": "3"
+  },
+  {
+    "name": "IAN MITCHELL",
+    "numRatings": "8",
+    "avgRating": "3.6",
+    "avgDifficulty": "3.9"
+  },
+  {
+    "name": "HENDRIK BLOK",
+    "numRatings": "51",
+    "avgRating": "5",
+    "avgDifficulty": "3"
+  },
+  {
+    "name": "GIULIA TOTI",
+    "numRatings": "33",
+    "avgRating": "2.6",
+    "avgDifficulty": "3.9"
+  },
+  {
+    "name": "JESSICA WONG",
+    "numRatings": "2",
+    "avgRating": "2.3",
+    "avgDifficulty": "1.5"
+  },
+  {
+    "name": "GREGOR KICZALES",
+    "numRatings": "213",
+    "avgRating": "4.6",
+    "avgDifficulty": "4"
+  },
+  {
+    "name": "NORMAN HUTCHINSON",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "SEYYED HOSSEINI",
+    "numRatings": "17",
+    "avgRating": "4.9",
+    "avgDifficulty": "3"
+  },
+  {
+    "name": "DE MOCHETTI",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "FIRAS MOOSVI",
+    "numRatings": "79",
+    "avgRating": "3.1",
+    "avgDifficulty": "2.8"
+  },
+  {
+    "name": "PAUL CARTER",
+    "numRatings": "2",
+    "avgRating": "2.5",
+    "avgDifficulty": "2.5"
+  },
+  {
+    "name": "MEHRDAD OVEISI-FORDOEI",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "FELIX GRUND",
+    "numRatings": "27",
+    "avgRating": "4.6",
+    "avgDifficulty": "3"
+  },
+  {
+    "name": "JORDON JOHNSON",
+    "numRatings": "38",
+    "avgRating": "3.4",
+    "avgDifficulty": "3.6"
+  },
+  {
+    "name": "MICHAEL FEELEY",
+    "numRatings": "5",
+    "avgRating": "5",
+    "avgDifficulty": "1.2"
+  },
+  {
+    "name": "GEOFFREY TIEN",
+    "numRatings": "47",
+    "avgRating": "4.1",
+    "avgDifficulty": "3.9"
+  },
+  {
+    "name": "VSEVOLOD LYNOV",
+    "numRatings": "22",
+    "avgRating": "2.9",
+    "avgDifficulty": "2.2"
+  },
+  {
+    "name": "CHEN GREIF",
+    "numRatings": "16",
+    "avgRating": "4.6",
+    "avgDifficulty": "3.5"
+  },
+  {
+    "name": "JOEL FRIEDMAN",
+    "numRatings": "23",
+    "avgRating": "3.3",
+    "avgDifficulty": "3.6"
+  },
+  {
+    "name": "RACHEL POTTINGER",
+    "numRatings": "32",
+    "avgRating": "4.8",
+    "avgDifficulty": "2.5"
+  },
+  {
+    "name": "GITTU GEORGE",
+    "numRatings": "3",
+    "avgRating": "5",
+    "avgDifficulty": "3.4"
+  },
+  {
+    "name": "RAYMOND NG",
+    "numRatings": "24",
+    "avgRating": "3.3",
+    "avgDifficulty": "3.1"
+  },
+  {
+    "name": "REID HOLMES",
+    "numRatings": "6",
+    "avgRating": "3.6",
+    "avgDifficulty": "3.3"
+  },
+  {
+    "name": "NICHOLAS BRADLEY",
+    "numRatings": "9",
+    "avgRating": "3.8",
+    "avgDifficulty": "3.6"
+  },
+  {
+    "name": "RONALD GARCIA",
+    "numRatings": "39",
+    "avgRating": "3",
+    "avgDifficulty": "3.9"
+  },
+  {
+    "name": "DAVID POOLE",
+    "numRatings": "24",
+    "avgRating": "3.2",
+    "avgDifficulty": "3.8"
+  },
+  {
+    "name": "STEVEN WOLFMAN",
+    "numRatings": "147",
+    "avgRating": "5",
+    "avgDifficulty": "4"
+  },
+  {
+    "name": "DE VAN",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "DINESH PAI",
+    "numRatings": "11",
+    "avgRating": "3.6",
+    "avgDifficulty": "4.1"
+  },
+  {
+    "name": "AASTHA MEHTA",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "JERRY JIM",
+    "numRatings": "2",
+    "avgRating": "3",
+    "avgDifficulty": "2.5"
+  },
+  {
+    "name": "ANNE CONDON",
+    "numRatings": "19",
+    "avgRating": "3.5",
+    "avgDifficulty": "3.9"
+  },
+  {
+    "name": "SUSANNE BRADLEY",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "FREDERICK SHEPHERD",
+    "numRatings": "1",
+    "avgRating": "4",
+    "avgDifficulty": "3"
+  },
+  {
+    "name": "ANDREW ROTH",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "VARADA KOLHATKAR",
+    "numRatings": "6",
+    "avgRating": "4.3",
+    "avgDifficulty": "2.3"
+  },
+  {
+    "name": "MATHIAS LECUYER",
+    "numRatings": "1",
+    "avgRating": "4",
+    "avgDifficulty": "2"
+  },
+  {
+    "name": "JEFFREY CLUNE",
+    "numRatings": "6",
+    "avgRating": "4.6",
+    "avgDifficulty": "3.6"
+  },
+  {
+    "name": "ANIKA SAYARA",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "LAURA CANG",
+    "numRatings": "16",
+    "avgRating": "4.9",
+    "avgDifficulty": "2"
+  },
+  {
+    "name": "MARK GREENSTREET",
+    "numRatings": "15",
+    "avgRating": "3.4",
+    "avgDifficulty": "3.3"
+  },
+  {
+    "name": "EDWIN KNORR",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "JIANHAO CAO",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "MICHAEL FRIEDLANDER",
+    "numRatings": "7",
+    "avgRating": "3.5",
+    "avgDifficulty": "2.8"
+  },
+  {
+    "name": "CAROLINE LEMIEUX",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "WILLIAM MASON",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "ARPAN GUJARATI",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "WILLIAM EVANS",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "MATTHEW BROWN",
+    "numRatings": "12",
+    "avgRating": "4.6",
+    "avgDifficulty": "1.8"
+  },
+  {
+    "name": "KWANG YI",
+    "numRatings": "7",
+    "avgRating": "3.5",
+    "avgDifficulty": "3.8"
+  },
+  {
+    "name": "HELGE RHODIN",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "CHRIS KERSLAKE",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "HEDAYAT ZARKOOB",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "THOMAS PASQUIER",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "MARYAM RAIYAT",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "FRANK WOOD",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "VERED SHWARTZ",
+    "numRatings": "2",
+    "avgRating": "4",
+    "avgDifficulty": "2"
+  },
+  {
+    "name": "NICHOLAS HARVEY",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "BO XIAO",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "DANICA SUTHERLAND",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "SANG-WHA SIEN",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "TAMARA MUNZNER",
+    "numRatings": "21",
+    "avgRating": "2.9",
+    "avgDifficulty": "3.8"
+  },
+  {
+    "name": "RETO ACHERMANN",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "ALLA SHEFFER",
+    "numRatings": "12",
+    "avgRating": "3",
+    "avgDifficulty": "2.9"
+  },
+  {
+    "name": "CRISTINA CONATI",
+    "numRatings": "41",
+    "avgRating": "2.1",
+    "avgDifficulty": "3"
+  },
+  {
+    "name": "DAOCHEN WANG",
+    "numRatings": "0",
+    "avgRating": "NA",
+    "avgDifficulty": "NA"
+  },
+  {
+    "name": "CRISTIE FORD",
+    "numRatings": "16",
+    "avgRating": "3.3",
+    "avgDifficulty": "4.1"
+  },
+  {
+    "name": "WILLIAM BOWMAN",
+    "numRatings": "13",
+    "avgRating": "4",
+    "avgDifficulty": "3.4"
+  },
+  {
+    "name": "ALEXANDER SUMMERS",
+    "numRatings": "4",
+    "avgRating": "4.3",
+    "avgDifficulty": "3"
+  },
+  {
+    "name": "KARON MACLEAN",
+    "numRatings": "12",
+    "avgRating": "3.3",
+    "avgDifficulty": "2.6"
+  },
+  {
+    "name": "JIARUI DING",
+    "numRatings": "2",
+    "avgRating": "3",
+    "avgDifficulty": "4.5"
+  }
+]

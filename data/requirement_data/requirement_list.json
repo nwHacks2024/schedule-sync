@@ -1,0 +1,80 @@
+[
+  {
+    "course_num": "110",
+    "dept": "CPSC",
+    "faculty": "Science",
+    "name": "Computer Science"
+  },
+  {
+    "course_num": "121",
+    "dept": "CPSC",
+    "faculty": "Science",
+    "name": "Computer Science"
+  },
+  {
+    "course_num": "100",
+    "dept": "MATH",
+    "faculty": "Science",
+    "name": "Computer Science"
+  },
+  {
+    "course_num": "101",
+    "dept": "MATH",
+    "faculty": "Science",
+    "name": "Computer Science"
+  },
+  {
+    "course_num": "210",
+    "dept": "CPSC",
+    "faculty": "Science",
+    "name": "Computer Science"
+  },
+  {
+    "course_num": "213",
+    "dept": "CPSC",
+    "faculty": "Science",
+    "name": "Computer Science"
+  },
+  {
+    "course_num": "221",
+    "dept": "CPSC",
+    "faculty": "Science",
+    "name": "Computer Science"
+  },
+  {
+    "course_num": "200",
+    "dept": "MATH",
+    "faculty": "Science",
+    "name": "Computer Science"
+  },
+  {
+    "course_num": "221",
+    "dept": "MATH",
+    "faculty": "Science",
+    "name": "Computer Science"
+  },
+  {
+    "course_num": "251",
+    "dept": "STAT",
+    "faculty": "Science",
+    "name": "Computer Science"
+  },
+  {
+    "course_num": "310",
+    "dept": "CPSC",
+    "faculty": "Science",
+    "name": "Computer Science"
+  },
+  {
+    "course_num": "313",
+    "dept": "CPSC",
+    "faculty": "Science",
+    "name": "Computer Science"
+  },
+  {
+    "course_num": "320",
+    "dept": "CPSC",
+    "faculty": "Science",
+    "name": "Computer Science"
+  }
+]
