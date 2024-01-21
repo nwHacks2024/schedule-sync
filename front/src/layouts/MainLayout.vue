@@ -12,17 +12,18 @@
         <q-btn dense flat round icon="menu" @click="toggleRightDrawer" />
       </q-toolbar>
 
-      <q-tabs align="left">
-        <q-route-tab to="/" label="Home" />
-        <q-route-tab to="/page1" label="Your Schedule" />
-        <q-route-tab to="/page2" label="Degree Navigator" />
-        <q-route-tab to="/page3" label="Friend Schedules" />
+      <q-tabs align="left" v-model="selectedContent">
+        <q-route-tab to="/Login" label="Sign Out" />
+        <q-tab name="mySchedule" label="My Schedule" />
+        <q-tab name="degreePlanner" label="Degree Planner" />
+        <q-tab name="addCourses" label="Add Courses" />
+        <q-tab name="compareSchedules" label="Compare Schedules" />
         <FriendsDropdown />
       </q-tabs>
     </q-header>
 
     <q-page-container>
-      <router-view />
+      <router-view :selectedContent="selectedContent" />
     </q-page-container>
 
     <q-footer elevated class="bg-grey-8 text-white">
@@ -36,39 +37,43 @@
       </q-toolbar>
     </q-footer>
 
-    <q-drawer
-      v-model="rightDrawerOpen"
-      side="right"
-      bordered
-      class="my-drawer bg-secondary"
-    >
-     <MenuComponent />
+    <q-drawer v-model="rightDrawerOpen" side="right" bordered class="my-drawer bg-secondary">
+      <MenuComponent />
     </q-drawer>
   </q-layout>
 </template>
 
 <script>
 import { ref } from "vue";
-import MenuComponent from '../components/MenuComponent.vue'
+import MenuComponent from "../components/MenuComponent.vue";
 import FriendsDropdown from "../components/FriendsDropdown.vue";
 
 export default {
   components: {
     MenuComponent,
-    FriendsDropdown
+    FriendsDropdown,
   },
   setup() {
     const rightDrawerOpen = ref(false);
+    const selectedContent = ref("");
+
+    const toggleRightDrawer = () => {
+      rightDrawerOpen.value = !rightDrawerOpen.value;
+    };
 
     return {
       rightDrawerOpen,
-      toggleRightDrawer() {
-        rightDrawerOpen.value = !rightDrawerOpen.value;
-      },
+      toggleRightDrawer,
+      selectedContent,
     };
   },
 };
 </script>
+
+<style scoped>
+/* Add your styles here */
+</style>
+
 <style scoped>
 .bubble-item {
   display: flex;

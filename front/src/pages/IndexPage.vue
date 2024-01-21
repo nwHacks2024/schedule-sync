@@ -1,6 +1,25 @@
 <template>
   <q-page class="flex flex-center">
-    <CalendarComponent />
+
+    <div v-if="selectedContent === 'mySchedule'">
+      <CalendarComponent />
+    </div>
+
+    <div v-else-if="selectedContent === 'degreePlanner'">
+      <p>This is your degree planner!</p>
+    </div>
+
+    <div v-else-if="selectedContent === 'addCourses'">
+      <p>Here is where you can add courses</p>
+    </div>
+
+    <div v-else-if="selectedContent === 'compareSchedules'">
+      <CalendarComponent />
+    </div>
+
+    <div v-else>
+      <h1> Welcome to BDEC! The better SSC.</h1>
+    </div>
   </q-page>
 </template>
 
@@ -13,7 +32,12 @@ export default defineComponent({
   components: {
     CalendarComponent
   },
+  props: {
+    selectedContent: String,
+  },
+
   name: 'IndexPage'
+
 })
 </script>
 
