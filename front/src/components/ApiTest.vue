@@ -17,8 +17,6 @@
     methods: {
       async fetchUserInfo() {
         try {
-
-          debugger;
           const response = await axios.post('/api/userprofile', {
             username: "dfroberg"
           });
