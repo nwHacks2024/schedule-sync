@@ -1,0 +1,47 @@
+{
+    "count": 6,
+    "results": [
+        {
+            "degreeName": null,
+            "faculty": null,
+            "firstName": "Brett",
+            "lastName": "Caswell",
+            "username": "bcaswell"
+        },
+        {
+            "degreeName": null,
+            "faculty": null,
+            "firstName": "Erica",
+            "lastName": "Buchanan",
+            "username": "ebuchanan"
+        },
+        {
+            "degreeName": null,
+            "faculty": null,
+            "firstName": "",
+            "lastName": "",
+            "username": "testingFirstLastNull"
+        },
+        {
+            "degreeName": null,
+            "faculty": null,
+            "firstName": "None",
+            "lastName": "None",
+            "username": "testNoFirstLast"
+        },
+        {
+            "degreeName": null,
+            "faculty": null,
+            "firstName": "None",
+            "lastName": "None",
+            "username": "testNoFirstLastNull"
+        },
+        {
+            "degreeName": null,
+            "faculty": null,
+            "firstName": "",
+            "lastName": "",
+            "username": "testUserFirstLast"
+        }
+    ]
+}
