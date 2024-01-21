@@ -1,141 +1,139 @@
 <template>
+  <q-card class="my-card">
+    <q-card-section>
+      <div class="header-container">
+        <q-select
+          v-model="selectedOption1"
+          :options="dropdownOptions1"
+          label="Course Department"
+          class="wider-dropdown q-mr-md"
+        ></q-select>
+        <q-btn @click="loadCourseNumbers" label="Load Course Numbers" color="primary" class="q-ml-md" />
 
-  <div class="max-width-container">
-    <q-row>
-      <q-select
-        v-model="selectedDepartment"
-        :options="departmentOptions"
-        label="Select Department"
-        @input="loadCourseNumbers"
-        class="q-mr-md"
-      />
-      <q-select
-        v-model="selectedCourseNumber"
-        :options="courseNumberOptions"
-        label="Select Course Number"
-        :disable="!selectedDepartment"
-        @input="searchSections"
-      />
-    </q-row>
+        <q-select
+          v-if="showSecondDropdown"
+          v-model="selectedOption2"
+          :options="dropdownOptions2"
+          label="Course Number"
+          class="wider-dropdown"
+        ></q-select>
 
-    <q-btn
-      @click="searchSections"
-      label="Search"
-      color="primary"
+        <q-btn @click="searchSections" label="Search Sections" color="primary" class="q-ml-md" />
+      </div>
+    </q-card-section>
+
+    <!-- Loading Spinner -->
+    <q-spinner v-if="loading" size="50px" color="primary" class="q-mt-md" />
+
+    <!-- Card Carousel -->
+    <q-carousel
+      v-if="!loading && courses.length > 0"
+      control-color="primary"
+      arrows
+      navigation
+      infinite
       class="q-mt-md"
-    />
-  </div>
-
-  <q-row>
-    <q-select
-      v-model="selectedDepartment"
-      :options="departmentOptions"
-      label="Select Department"
-      @input="loadCourseNumbers"
-      class="q-mr-md"
-    />
-  </q-row>
-
-  <q-btn
-    @click="searchSections"
-    label="Search"
-    color="primary"
-    class="q-mt-md"
-  />
-
-  <q-row>
-    <q-col cols="12" md="6">
-      <q-select
-        v-model="selectedOption1"
-        :options="selectOptions1"
-        label="Select option for Button 1"
-      ></q-select>
-    </q-col>
-    <q-col cols="12" md="6">
-      <q-select
-        v-model="selectedOption2"
-        :options="selectOptions2"
-        label="Select option for Button 2"
-      ></q-select>
-    </q-col>
-  </q-row>
-
-  <q-carousel
-    v-if="sections.length > 0"
-    control-color="primary"
-    arrows
-    navigation
-    infinite
-  >
-    <q-card v-for="section in sections" :key="section.id">
-      <q-card-section>
-        <q-card-title>{{ section.title }}</q-card-title>
-      </q-card-section>
-      <q-card-section>
-        <p>{{ section.description }}</p>
-      </q-card-section>
-      <!-- Add more card content as needed -->
-    </q-card>
-  </q-carousel>
-  <!--
-    <q-alert
-      v-if="error"
-      :type="errorType"
-      :message="errorMessage"
-      class="q-mt-md"
-    /> -->
+    >
+      <q-card v-for="course in courses" :key="course.id">
+        <q-card-section>
+          <!-- <q-card-title>{{ course.title }}</q-card-title> -->
+        </q-card-section>
+        <q-card-section>
+          <p>{{ course.description }}</p>
+        </q-card-section>
+        <!-- Add more card content as needed -->
+      </q-card>
+    </q-carousel>
+  </q-card>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
-      selectedDepartment: null,
-      selectedCourseNumber: null,
-      departmentOptions: [
+      selectedOption1: null,
+      selectedOption2: null,
+      dropdownOptions1: [
         { label: "CPSC", value: "CPSC" },
-        // Add more departments as needed
+        { label: "MATH", value: "MATH" },
+        { label: "STAT", value: "STAT" },
+        // Add more options as needed
       ],
-      courseNumberOptions: [110, 210],
-      sections: [],
-      error: false,
-      errorType: "negative",
-      errorMessage: "",
+      dropdownOptions2: [],
+      courses: [], // Add your course data here
+      loading: false, // Indicates whether an API call is in progress
+      showSecondDropdown: false, // Flag to control the visibility of the second dropdown
     };
   },
   methods: {
     async loadCourseNumbers() {
+      console.log("Loading Courses");
+      console.log("Selected Department:", this.selectedOption1);
+
+      this.loading = true; // Start loading spinner
       try {
-        const response = await axios.get(`/api/courses`);
-        this.courseNumberOptions = response.data;
-        console.log(this.courseNumberOptions);
+        // Fetch course numbers based on the selected department
+        console.log(this.selectedOption1.value)
+        const response = await axios.post("/api/courses", {
+          department: this.selectedOption1.value,
+
+        });
+        console.log("Response:", response.data);
+
+        this.dropdownOptions2 = response.data.courseNumbers;
+        this.showSecondDropdown = true; // Show the second dropdown after loading options
       } catch (error) {
         console.error("Error fetching course numbers:", error);
+      } finally {
+        this.loading = false; // Stop loading spinner
       }
     },
-    // async searchSections() {
-    //   try {
-    //     // Replace with your actual API endpoint for fetching sections
-    //     const response = await axios.get(`/api/sections/${this.selectedDepartment}/${this.selectedCourseNumber}`);
-    //     this.sections = response.data;
-    //     this.error = false;
-    //   } catch (error) {
-    //     this.error = true;
-    //     this.errorType = 'negative';
-    //     this.errorMessage = 'Error fetching sections. Please try again.';
-    //     console.error('Error fetching sections:', error);
-    //   }
-    // },
+    async searchSections() {
+      // Add your search logic here
+      console.log("Search button clicked!");
+      console.log("Selected Option 1:", this.selectedOption1);
+      console.log("Selected Option 2:", this.selectedOption2);
+
+      this.loading = true; // Start loading spinner
+      try {
+        // Fetch courses based on selected options and update the 'courses' array
+        // Replace the following line with your actual API call or data retrieval logic
+        this.courses = [
+          { id: 1, title: "Course 1", description: "Description for Course 1" },
+          { id: 2, title: "Course 2", description: "Description for Course 2" },
+          // Add more courses as needed
+        ];
+      } catch (error) {
+        console.error("Error fetching courses:", error);
+      } finally {
+        this.loading = false; // Stop loading spinner
+      }
+    },
   },
 };
 </script>
 
 <style scoped>
-.course-search {
-  /* max-width: 00px; */
+.my-card {
+  max-width: 600px; /* Adjust the max-width as needed */
   margin: auto;
+  margin-top: 20px;
   padding: 20px;
 }
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wider-dropdown {
+  min-width: 200px; /* Adjust the min-width as needed */
+}
+
+/* Add margin to the right of the first q-select */
 .q-mr-md {
   margin-right: 10px; /* Adjust the margin as needed */
 }

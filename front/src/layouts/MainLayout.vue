@@ -52,7 +52,7 @@ export default {
   },
   setup() {
     const rightDrawerOpen = ref(false);
-    const selectedContent = ref("mySchedule");
+    const selectedContent = ref("addCourses");
 
     const toggleRightDrawer = () => {
       rightDrawerOpen.value = !rightDrawerOpen.value;
