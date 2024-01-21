@@ -24,11 +24,18 @@
           :use-input="true"
         ></q-select>
 
+        <!-- <q-btn
+          @click="searchSections"
+          label="Search Sections"
+          color="primary"
+          class="q-ml-md, q-mr-md"
+        /> -->
         <q-btn
           @click="searchSections"
           label="Search Sections"
           color="primary"
           class="q-ml-md, q-mr-md"
+          :disable="!showSecondDropdown"
         />
       </div>
     </q-card-section>
@@ -41,8 +48,15 @@
       class="q-mt-md, q-mr-md"
     />
 
-    <div v-if="!loading && courses.length > 0" class="scrollable-card-container">
-      <q-card v-for="section in courses" :key="section.id" class="scrollable-card">
+    <div
+      v-if="!loading && courses.length > 0"
+      class="scrollable-card-container"
+    >
+      <q-card
+        v-for="section in courses"
+        :key="section.id"
+        class="scrollable-card"
+      >
         <q-card-section>
           <div class="section-title">{{ section.section }}</div>
           <div>Start Time: {{ section.startTime }}</div>
@@ -51,15 +65,17 @@
 
         <!-- Plus Button -->
         <q-card-actions>
-          <q-btn @click="registerSection(section)" icon="add" color="primary" label="Add to Schedule" />
+          <q-btn
+            @click="registerSection(section)"
+            icon="add"
+            color="primary"
+            label="Add to Schedule"
+          />
         </q-card-actions>
       </q-card>
     </div>
-
-
   </q-card>
 </template>
-
 <script>
 import axios from "axios";
 
@@ -78,6 +94,7 @@ export default {
       courses: [], // Add your course data here
       loading: false, // Indicates whether an API call is in progress
       showSecondDropdown: false, // Flag to control the visibility of the second dropdown
+      searchButtonDisabled: true, // New property to control the "Search Sections" button
     };
   },
   methods: {
@@ -101,6 +118,7 @@ export default {
         this.dropdownOptions2 = Array.from(uniqueCourseNumbers);
 
         this.showSecondDropdown = true; // Show the second dropdown after loading options
+        this.searchButtonDisabled = false; // Enable the "Search Sections" button
       } catch (error) {
         console.error("Error fetching course numbers:", error);
       } finally {
@@ -116,10 +134,8 @@ export default {
       try {
         // Call the API endpoint /api/sections with courseNum and courseDept parameters
         const response = await axios.post("/api/sections", {
-          // courseNum: this.selectedOption2,
-          // courseDept: this.selectedOption1.value,
-          courseNum: "110",
-          courseDept: "CPSC",
+          courseNum: this.selectedOption2,
+          courseDept: this.selectedOption1.value,
         });
         console.log(response);
 
@@ -143,7 +159,7 @@ export default {
     async registerSection(section) {
       try {
         // Replace the following line with your actual API endpoint and payload
-        console.log(section.courseDept)
+        console.log(section.courseDept);
         const response = await axios.post("/api/addcourse", {
           username: "dfroberg",
           courseNum: section.courseNum,
@@ -157,6 +173,7 @@ export default {
   },
 };
 </script>
+
 
 <style scoped>
 .my-card {
