@@ -20,7 +20,8 @@
           v-model="selectedOption2"
           :options="dropdownOptions2"
           label="Course Number"
-          class="wider-dropdown"
+          class="wider-dropdown q-mr-md"
+          :use-input="true"
         ></q-select>
 
         <q-btn
@@ -40,25 +41,22 @@
       class="q-mt-md, q-mr-md"
     />
 
-    <!-- Card Carousel -->
-    <q-carousel
-      v-if="!loading && courses.length > 0"
-      control-color="primary"
-      arrows
-      navigation
-      infinite
-      class="q-mt-md"
-    >
-      <q-card v-for="course in courses" :key="course.id">
+    <div v-if="!loading && courses.length > 0" class="scrollable-card-container">
+      <q-card v-for="section in courses" :key="section.id" class="scrollable-card">
         <q-card-section>
-          <!-- <q-card-title>{{ course.title }}</q-card-title> -->
+          <div class="section-title">{{ section.section }}</div>
+          <div>Start Time: {{ section.startTime }}</div>
+          <div>End Time: {{ section.endTime }}</div>
         </q-card-section>
-        <q-card-section>
-          <p>{{ course.description }}</p>
-        </q-card-section>
-        <!-- Add more card content as needed -->
+
+        <!-- Plus Button -->
+        <q-card-actions>
+          <q-btn @click="registerSection(section)" icon="add" color="primary" label="Add to Schedule" />
+        </q-card-actions>
       </q-card>
-    </q-carousel>
+    </div>
+
+
   </q-card>
 </template>
 
@@ -68,8 +66,8 @@ import axios from "axios";
 export default {
   data() {
     return {
-      selectedOption1: null,
-      selectedOption2: null,
+      selectedOption1: "",
+      selectedOption2: "",
       dropdownOptions1: [
         { label: "CPSC", value: "CPSC" },
         { label: "MATH", value: "MATH" },
@@ -84,22 +82,18 @@ export default {
   },
   methods: {
     async loadCourseNumbers() {
-      console.log("Loading Courses");
-      console.log("Selected Department:", this.selectedOption1);
-
       this.loading = true; // Start loading spinner
       try {
         // Fetch course numbers based on the selected department
         const response = await axios.post("/api/courses", {
           department: this.selectedOption1.value,
         });
-        console.log("Response:", response.data);
 
         // Use a Set to store unique course numbers
         const uniqueCourseNumbers = new Set();
 
         // Iterate through the response data and add course numbers to the Set
-        response.data.results.forEach(course => {
+        response.data.results.forEach((course) => {
           uniqueCourseNumbers.add(course.courseNum);
         });
 
@@ -114,32 +108,54 @@ export default {
       }
     },
     async searchSections() {
-      // Add your search logic here
       console.log("Search button clicked!");
       console.log("Selected Option 1:", this.selectedOption1);
       console.log("Selected Option 2:", this.selectedOption2);
 
       this.loading = true; // Start loading spinner
       try {
-        // Fetch courses based on selected options and update the 'courses' array
-        // Replace the following line with your actual API call or data retrieval logic
-        this.courses = [
-          { id: 1, title: "Course 1", description: "Description for Course 1" },
-          { id: 2, title: "Course 2", description: "Description for Course 2" },
-          // Add more courses as needed
-        ];
+        // Call the API endpoint /api/sections with courseNum and courseDept parameters
+        const response = await axios.post("/api/sections", {
+          // courseNum: this.selectedOption2,
+          // courseDept: this.selectedOption1.value,
+          courseNum: "110",
+          courseDept: "CPSC",
+        });
+        console.log(response);
+
+        // Update the 'courses' array with the response data
+        this.courses = response.data.results.map((section, index) => ({
+          id: index + 1, // Assuming each section has a unique identifier
+          courseDept: section.courseDept,
+          courseNum: section.courseNum,
+          section: section.section,
+          daysOfWeek: section.daysOfWeek,
+          startTime: section.startTime,
+          endTime: section.endTime,
+          // Add more details as needed
+        }));
       } catch (error) {
-        console.error("Error fetching courses:", error);
+        console.error("Error fetching sections:", error);
       } finally {
         this.loading = false; // Stop loading spinner
+      }
+    },
+    async registerSection(section) {
+      try {
+        // Replace the following line with your actual API endpoint and payload
+        const response = await axios.post("/api/addcourse", {
+          username: "dfroberg",
+          courseNum: section.courseNum,
+          courseDept: section.courseDept,
+          section: section.id,
+        });
+      } catch (error) {
+        console.error("Error adding course:", error);
       }
     },
   },
 };
 </script>
-
-
-
 
 <style scoped>
 .my-card {
@@ -162,5 +178,14 @@ export default {
 /* Add margin to the right of the first q-select */
 .q-mr-md {
   margin-right: 10px; /* Adjust the margin as needed */
+}
+.scrollable-card-container {
+  max-height: 500px; /* Set the maximum height for scrollability */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Adjust styles for individual scrollable cards */
+.scrollable-card {
+  margin-bottom: 20px; /* Adjust margin as needed */
 }
 </style>
