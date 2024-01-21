@@ -13,7 +13,7 @@
       </q-toolbar>
 
       <q-tabs align="left" v-model="selectedContent">
-        <q-route-tab to="/Login" label="Sign Out" />
+
         <q-tab name="mySchedule" label="My Schedule" />
         <q-tab name="degreePlanner" label="Degree Planner" />
         <q-tab name="addCourses" label="Add Courses" />
@@ -38,6 +38,9 @@
 
     <q-drawer v-model="rightDrawerOpen" side="right" bordered class="my-drawer bg-secondary">
       <MenuComponent />
+      <q-tabs>
+        <q-route-tab to="/Login" label="Sign Out" />
+      </q-tabs>
     </q-drawer>
   </q-layout>
 </template>
@@ -52,7 +55,7 @@ export default {
   },
   setup() {
     const rightDrawerOpen = ref(false);
-    const selectedContent = ref("addCourses");
+    const selectedContent = ref("mySchedule");
 
     const toggleRightDrawer = () => {
       rightDrawerOpen.value = !rightDrawerOpen.value;
