@@ -33,6 +33,7 @@
 <script>
 import axios from "axios";
 import {useRouter} from "vue-router";
+import {useAuthStore} from "src/stores";
 
 export default {
   name: 'LoginCard',
@@ -53,6 +54,7 @@ export default {
 
         // Handle the response as needed
         console.log('User logged in successfully:', response.data);
+        useAuthStore().setUsername(this.username);
         this.$router.push('/main');
       } catch (error) {
         // Handle errors

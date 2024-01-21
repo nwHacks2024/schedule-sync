@@ -16,6 +16,7 @@
 
 <script>
 import axios from 'axios';
+import {useAuthStore} from "src/stores";
 
 export default {
   data() {
@@ -31,10 +32,10 @@ export default {
     async loadFriends() {
       try {
         this.loading = true;
-
+        let myUsername = useAuthStore().username;
         // Make a POST request to the /friends API to get the data
         const response = await axios.post('/api/friends', {
-          username: "dfroberg"
+          username: myUsername
         });
 
         // Assuming the API response is an object with a 'results' property

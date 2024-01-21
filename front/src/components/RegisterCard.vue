@@ -45,6 +45,7 @@
 
   <script>
   import axios from "axios";
+  import {useAuthStore} from "src/stores";
   // import {useRouter} from "vue-router";
 
   export default {
@@ -69,6 +70,7 @@
 
         // Handle the response as needed
         console.log('User registered successfully:', response.data);
+        useAuthStore().setUsername(this.username);
         this.$router.push('/main');
       } catch (error) {
         // Handle errors

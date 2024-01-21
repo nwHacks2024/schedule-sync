@@ -15,6 +15,7 @@
 
 <script>
 import axios from 'axios';
+import {useAuthStore} from "src/stores";
 
 export default {
   data() {
@@ -35,9 +36,10 @@ export default {
   methods: {
     async fetchUserProfile() {
       try {
+        let myUsername = useAuthStore().username;
         // Assuming the /api/userprofile endpoint returns the user profile data
         const response = await axios.post('/api/userprofile', {
-          username: 'dfroberg',
+          username: myUsername,
         });
         const userData = response.data;
 
