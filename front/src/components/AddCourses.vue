@@ -143,6 +143,7 @@ export default {
     async registerSection(section) {
       try {
         // Replace the following line with your actual API endpoint and payload
+        console.log(section.courseDept)
         const response = await axios.post("/api/addcourse", {
           username: "dfroberg",
           courseNum: section.courseNum,
