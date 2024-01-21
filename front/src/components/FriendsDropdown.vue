@@ -1,13 +1,15 @@
 <template>
   <div class="q-pa-md">
-    <q-btn-dropdown color="primary" label="Dropdown Button" no-shadow @show="loadFriends">
-      <q-list>
+    <q-btn-dropdown color="primary" label="Compare Schedules" no-shadow>
+      <q-list v-if="!loading">
         <q-item v-for="friend in friends.results" :key="friend.id" clickable v-close-popup @click="onItemClick(friend)">
           <q-item-section>
             <q-item-label>{{ friend.friendUsername }}</q-item-label>
           </q-item-section>
         </q-item>
       </q-list>
+
+      <q-spinner-gears v-else size="50px"></q-spinner-gears>
     </q-btn-dropdown>
   </div>
 </template>
@@ -19,6 +21,7 @@ export default {
   data() {
     return {
       friends: { results: [] },
+      loading: false,
     };
   },
   mounted() {
@@ -27,6 +30,8 @@ export default {
   methods: {
     async loadFriends() {
       try {
+        this.loading = true;
+
         // Make a POST request to the /friends API to get the data
         const response = await axios.post('/api/friends', {
           username: "dfroberg"
@@ -37,10 +42,11 @@ export default {
         console.log(this.friends);
       } catch (error) {
         console.error('Error fetching data from /friends API:', error);
+      } finally {
+        this.loading = false;
       }
     },
     onItemClick(friend) {
-      // Handle item click event here, you can access the selected friend object
       console.log('Selected friend:', friend);
     },
   },

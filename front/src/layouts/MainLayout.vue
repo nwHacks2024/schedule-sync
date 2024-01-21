@@ -37,7 +37,6 @@
     </q-footer>
 
     <q-drawer
-      show-if-above
       v-model="rightDrawerOpen"
       side="right"
       bordered
