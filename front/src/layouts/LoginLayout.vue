@@ -17,7 +17,7 @@
       <q-page-container>
         <router-view />
       </q-page-container>
-  
+
       <q-footer elevated class="bg-grey-8 text-white">
         <q-toolbar>
           <q-toolbar-title>
@@ -37,19 +37,8 @@
   
   export default {
     setup () {
-      const leftDrawerOpen = ref(false)
-      const rightDrawerOpen = ref(false)
   
       return {
-        leftDrawerOpen,
-        toggleLeftDrawer () {
-          leftDrawerOpen.value = !leftDrawerOpen.value
-        },
-  
-        rightDrawerOpen,
-        toggleRightDrawer () {
-          rightDrawerOpen.value = !rightDrawerOpen.value
-        }
       }
     }
   }
