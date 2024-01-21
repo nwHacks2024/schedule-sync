@@ -340,7 +340,7 @@ def sectioninfo():
         return jsonify({'error': 'Course does not exist'}), 400
 
 
-    sql_query = sql_query = f"""
+    sql_query = f"""
 SELECT
     Teaches.profName,
     Teaches.profDept,
@@ -366,15 +366,6 @@ WHERE
 """
 
     results = connect.query(sql_query)
-    # section_results = connect.query(f"SELECT * FROM Sections WHERE courseNum = '{courseNum}'"
-    #                              f" AND courseDept = '{courseDept}'"
-    #                              f" AND section = '{sectionNum}'"
-    #                              f" AND term = '{term}'")
-    #
-    # teaches_results = connect.query(f"SELECT * FROM Teaches WHERE courseNum = '{courseNum}'"
-    #                              f" AND courseDept = '{courseDept}'"
-    #                              f" AND section = '{sectionNum}'"
-    #                              f" AND term = '{term}'")
 
     section_titles = connect.query("SHOW COLUMNS FROM Sections")
     prof_titles = connect.query("SHOW COLUMNS FROM Professors")
