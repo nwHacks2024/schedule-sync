@@ -1,0 +1,370 @@
+[
+  {
+    "courseNum": "100",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "103",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "107",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "110",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "121",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "203",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "210",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "213",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "221",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "259",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "298",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "302",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "303",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "304",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "310",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "311",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "312",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "313",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "314",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "317",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "319",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "320",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "322",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "330",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "340",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "344",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "349",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "368",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "404",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "406",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "410",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "416",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "418",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "420",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "421",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "422",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "425",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "427",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "430",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "436A",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "436C",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "436E",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "436N",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "436R",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "436S",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "440",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "444",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "447",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "448A",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "448B",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "448C",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "449",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "491",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "501",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "504",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "508",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "509",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "521",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "522",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "524",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "532C",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "532D",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "532V",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "532Y",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "533V",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "533Y",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "536E",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "536M",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "536S",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "536W",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "538G",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "538L",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "538S",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "539B",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "539S",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "540",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "543",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "544",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "545",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "549A",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "549B",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "550",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "554C",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "554X",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "589",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "649",
+    "dept": "CPSC"
+  },
+  {
+    "courseNum": "100",
+    "dept": "MATH"
+  },
+  {
+    "courseNum": "101",
+    "dept": "MATH"
+  },
+  {
+    "courseNum": "200",
+    "dept": "MATH"
+  },
+  {
+    "courseNum": "221",
+    "dept": "MATH"
+  },
+  {
+    "courseNum": "251",
+    "dept": "STAT"
+  },
+  {
+    "courseNum": "649",
+    "dept": "CPSC"
+  }
+]
