@@ -1,4 +1,8 @@
 import { defineStore } from 'pinia'
+import { api } from 'boot/axios'
+import { useQuasar } from 'quasar'
+
+const $q = useQuasar()
 
 export const useCounterStore = defineStore('counter', {
   state: () => ({
@@ -14,6 +18,9 @@ export const useCounterStore = defineStore('counter', {
   actions: {
     increment () {
       this.counter++
+    },
+    async fetchData() {
+      api.get('/mock_data')
     }
   
   }
