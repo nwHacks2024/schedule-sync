@@ -522,7 +522,12 @@ def addcourse():
     elif 'courseDept' not in data:
         return jsonify({'error': 'Missing courseDept field'}), 400
 
+
+    section = data['section']
     term = "2023W2"
+
+    if (section[0] == '1' or section[1] == '1'):
+        term = "2023W1"
 
     try:
         connect.query(f"INSERT INTO Enrolled VALUES ('{data['username']}', '{term}', '{data['section']}', '{data['courseNum']}', '{data['courseDept']}')")
