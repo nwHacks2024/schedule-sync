@@ -18,12 +18,11 @@ export default {
   data() {
     return {
       userProfile: {
-        username: 'johndoe',
-        email: 'johndoe@example.com',
-        firstName: 'John',
-        lastName: 'Doe',
-        faculty: 'Engineering',
-        degreeName: 'Computer Science',
+        username: 'Loading...',
+        firstName: '',
+        lastName: '',
+        faculty: '',
+        degreeName: '',
       },
     };
   },
