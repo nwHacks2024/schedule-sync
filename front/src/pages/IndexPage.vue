@@ -20,20 +20,20 @@
     </div>
 
     <div v-else>
-      <h1> Welcome to BDEC! The better SSC.</h1>
+      <img src="/public/icons/logo_words.jpeg" style="max-width: 50%; height: auto; margin-left: auto; margin-right: auto;" />
+
     </div>
+
   </q-page>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
-// import ApiTest from '../components/ApiTest.vue'
 import CalendarComponent from '../components/CalendarComponent.vue'
 import CalendarComponentFriend from '../components/CalendarComponentFriend.vue'
 import FriendsDropdown from '../components/FriendsDropdown.vue'
 import AddCourses from '../components/AddCourses.vue'
 import DegreePlanner from '../components/DegreePlanner.vue'
-
 
 export default defineComponent({
   components: {
@@ -46,9 +46,7 @@ export default defineComponent({
   props: {
     selectedContent: String,
   },
-
   name: 'IndexPage'
-
 })
 </script>
 

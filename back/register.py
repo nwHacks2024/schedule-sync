@@ -14,7 +14,7 @@ def register_user(username, password, firstName, lastName):
     query_string = (f"INSERT INTO Students VALUES('{username}',"
                     + (f" '{firstName}'," if firstName else " NULL,")
                     + (f" '{lastName}'," if lastName else " NULL,")
-                    + f" NULL, NULL, '{hashed_password_str}', '{salt_str}')")
+                    + f" 'Science', 'Computer Science', '{hashed_password_str}', '{salt_str}')")
     print(query_string)
 
     print(connect.query(query_string))

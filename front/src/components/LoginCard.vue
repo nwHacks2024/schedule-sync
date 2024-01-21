@@ -53,17 +53,14 @@ export default {
 
         // Handle the response as needed
         console.log('User logged in successfully:', response.data);
+        this.$router.push('/main');
       } catch (error) {
         // Handle errors
         console.error('Incorrect credentials:', error.response ? error.response.data : error.message);
       }
     },
-    goBack() { // TODO make this work
-      // Get the router instance
-      const router = useRouter();
-
-      // Navigate to the "/Login" path
-      router.push('/Login');
+    goBack() {
+      this.$emit('goBack');
     }
   }
 }

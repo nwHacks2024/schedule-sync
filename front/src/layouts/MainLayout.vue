@@ -4,16 +4,15 @@
       <q-toolbar>
         <q-toolbar-title>
           <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
+            <img src="/public/icons/book_transparent.png" />
           </q-avatar>
-          BDEC
+          Schedule Sync
         </q-toolbar-title>
 
         <q-btn dense flat round icon="menu" @click="toggleRightDrawer" />
       </q-toolbar>
 
       <q-tabs align="left" v-model="selectedContent">
-        <q-route-tab to="/Login" label="Sign Out" />
         <q-tab name="mySchedule" label="My Schedule" />
         <q-tab name="degreePlanner" label="Degree Planner" />
         <q-tab name="addCourses" label="Add Courses" />
@@ -29,15 +28,23 @@
       <q-toolbar>
         <q-toolbar-title>
           <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
+            <img src="/public/icons/book_transparent.png" />
           </q-avatar>
-          <div>BDEC</div>
+          Schedule Sync
         </q-toolbar-title>
       </q-toolbar>
     </q-footer>
 
-    <q-drawer v-model="rightDrawerOpen" side="right" bordered class="my-drawer bg-secondary">
+    <q-drawer
+      v-model="rightDrawerOpen"
+      side="right"
+      bordered
+      class="my-drawer bg-secondary"
+    >
       <MenuComponent />
+      <q-tabs>
+        <q-route-tab to="/Login" label="Sign Out" />
+      </q-tabs>
     </q-drawer>
   </q-layout>
 </template>
@@ -48,11 +55,11 @@ import MenuComponent from "../components/MenuComponent.vue";
 
 export default {
   components: {
-    MenuComponent
+    MenuComponent,
   },
   setup() {
     const rightDrawerOpen = ref(false);
-    const selectedContent = ref("addCourses");
+    const selectedContent = ref("");
 
     const toggleRightDrawer = () => {
       rightDrawerOpen.value = !rightDrawerOpen.value;

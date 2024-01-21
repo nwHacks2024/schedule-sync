@@ -4,9 +4,9 @@
       <button class='user-button' @click="showComponent('existing')">Existing User</button>
       <button class='user-button' @click="showComponent('new')">New User</button>
     </div>
-    <LoginCard v-if="isButtonClicked && !isNewUser" />
-    <RegisterCard v-if="isButtonClicked && isNewUser" />
-<!--    <button v-if="isButtonClicked" class="user-button" @click="goBack">Back</button>-->
+    <LoginCard v-if="isButtonClicked && !isNewUser" @goBack="goBack"/>
+    <RegisterCard v-if="isButtonClicked && isNewUser" @goBack="goBack"/>
+    <!-- <button v-if="isButtonClicked" class="user-button" @click="goBack">Back</button> -->
   </div>
 </template>
 
