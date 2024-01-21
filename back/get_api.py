@@ -157,14 +157,13 @@ def users():
     dictionary['count'] = record_count
 
     search_results = []
+    keys = []
+    for title in titles:
+        if title[0] != 'hashedPassword' and title[0] != 'salt':
+            keys.append(title[0])
     for i in range(0, record_count):
-        keys = []
-        for title in titles:
-            if title[0] != 'hashedPassword' and title[0] != 'salt':
-                keys.append(title[0])
-
         values = []
-        for entry in results[0]:
+        for entry in results[i]:
             values.append(entry)
 
         data_dict = dict(zip(keys, values))
@@ -220,6 +219,84 @@ def degreeinfo():
 
     return jsonify(dictionary), 200
 
+@app.route('/courses', methods=['POST'])
+def courses():
+    data = request.get_json()
+    if 'department' not in data:
+        return jsonify({'error': 'Missing department field'}), 400
+
+    department = data['department']
+    count = connect.query(f"SELECT COUNT(*) FROM Courses WHERE dept = '{department}'")[0][0]
+    if count == 0:
+        return jsonify({'error': 'Department does not exist'}), 400
+
+    record_count = connect.query(f"SELECT COUNT(*) FROM Courses WHERE dept = '{department}'")[0][0]
+    results = connect.query(f"SELECT * FROM Courses WHERE dept = '{department}'")
+
+    titles = connect.query("SHOW COLUMNS FROM Courses")
+    print(titles)
+    print(results)
+    dictionary = {}
+    dictionary['count'] = record_count
+
+    search_results = []
+
+    keys = []
+    for title in titles:
+        keys.append(title[0])
+
+    for i in range(0, record_count):
+        values = []
+        for entry in results[i]:
+            values.append(entry)
+
+        data_dict = dict(zip(keys, values))
+        search_results.append(data_dict)
+
+    dictionary['results'] = search_results
+
+    return jsonify(dictionary), 200
+
+@app.route('/sections', methods=['POST'])
+def sections():
+    data = request.get_json()
+    if 'courseNum' not in data:
+        return jsonify({'error': 'Missing courseNum field'}), 400
+    if 'courseDept' not in data:
+        return jsonify({'error': 'Missing courseDept field'}), 400
+
+    courseNum = data['courseNum']
+    courseDept = data['courseDept']
+    count = connect.query(f"SELECT COUNT(*) FROM Courses WHERE courseNum = '{courseNum}' AND dept = '{courseDept}'")[0][0]
+    if count == 0:
+        return jsonify({'error': 'Course does not exist'}), 400
+
+    record_count = connect.query(f"SELECT COUNT(*) FROM Sections WHERE courseNum = '{courseNum}' AND courseDept = '{courseDept}'")[0][0]
+    results = connect.query(f"SELECT * FROM Sections WHERE courseNum = '{courseNum}' AND courseDept = '{courseDept}'")
+
+    titles = connect.query("SHOW COLUMNS FROM Sections")
+    print(titles)
+    print(results)
+    dictionary = {}
+    dictionary['count'] = record_count
+
+    search_results = []
+
+    keys = []
+    for title in titles:
+        keys.append(title[0])
+
+    for i in range(0, record_count):
+        values = []
+        for entry in results[i]:
+            values.append(entry)
+
+        data_dict = dict(zip(keys, values))
+        search_results.append(data_dict)
+
+    dictionary['results'] = search_results
+
+    return jsonify(dictionary), 200
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
