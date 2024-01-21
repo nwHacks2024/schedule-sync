@@ -1,5 +1,4 @@
 import requests
-from bs4 import BeautifulSoup
 import json
 import re
 
@@ -9,7 +8,6 @@ def find_prof_info(prof_name):
     name_list = prof_name.lower().split()
     prof_search_query = prof_url_base + name_list[0] + "%20" + name_list[1]
     page = requests.get(prof_search_query)
-    # soup = BeautifulSoup(page.text, "html.parser")
     json_data = json.loads(re.search(r'window.__RELAY_STORE__ = ({.*})', page.text).group(1))
     # with open("new_jeff.json", "w") as json_file:
     #     json.dump(json_data, json_file, indent=2)
@@ -37,24 +35,10 @@ def find_prof_info(prof_name):
     with open("data/rate_my_prof_data/" + name_list[0] + "_" + name_list[1] + ".json", 'w') as json_file:
         json.dump(json_file_clean, json_file, indent=4)
 
-    # prof_ids = []
-    # for key, value in json_data.items():
-    #     for inner_key, inner_value in value.items():
-    #         if inner_value == "name" and inner_value == "University of British Columbia":
-    #             prof_ids.append(key)
-    # for id in prof_ids:
-    #     if json_data[id]["firstName"] == name_list[0] and json_data[id]["lastName"] == name_list[1]:
-    #         school_id = json_data[id]["school"]["ref"]
-    #         if json_data[school_id][""]
-    # print(type(json_data))
-
-    # pretty_json = json.dumps(json_data)
-    # print(type(pretty_json))
-    # script = soup.findAll('script')
-    # print(script)
-    # data = script.split("bootstrapData['menuMonthWeeks'] = ", 1)[-1].rsplit(';', 1)[0]
-    # data = json.loads(data)
-
 
 find_prof_info("Cinda Heeren")
 find_prof_info("Lynn Norman")
+find_prof_info("William Bowman")
+find_prof_info("Mike Feeley")
+find_prof_info("Felix Grund")
+find_prof_info("Gregor Kiczales")
