@@ -197,7 +197,11 @@ def registeredcourses():
     results = connect.query(sql_query)
 
     if not results:
-        return jsonify({'error': 'No courses found for the given username and term'}), 404
+        response_dict = {
+            'count': 0,
+            'results': []
+        }
+        return jsonify(response_dict), 200
 
     # Define the keys for the JSON response
     keys = ['term', 'section', 'courseNum', 'courseDept', 'daysOfWeek', 'startTime', 'endTime']
@@ -438,7 +442,7 @@ SELECT
     Sections.courseDept
 FROM
     Teaches
-INNER JOIN
+RIGHT OUTER JOIN
     Sections ON Teaches.term = Sections.term
               AND Teaches.section = Sections.section
               AND Teaches.courseNum = Sections.courseNum
