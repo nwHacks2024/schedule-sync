@@ -164,7 +164,7 @@ export default {
           username: "dfroberg",
           courseNum: section.courseNum,
           courseDept: section.courseDept,
-          section: section.id,
+          section: section.section,
         });
       } catch (error) {
         console.error("Error adding course:", error);
