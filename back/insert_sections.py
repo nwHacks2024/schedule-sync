@@ -40,4 +40,8 @@ if __name__ == "__main__":
 
     # Replace 'your_database' with the actual connect object
     for query in insert_queries:
-        connect.query(query)
+        try:
+            connect.query(query)
+        except Exception as e:
+            print(e)
+            print(query)
