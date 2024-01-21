@@ -6,7 +6,7 @@ import connect
 app = Flask(__name__)
 
 
-@app.route('/userprofile', methods=['GET'])
+@app.route('/api/userprofile', methods=['POST'])
 def userinfo():
     titles = connect.query("SHOW COLUMNS FROM Students")
     data = request.get_json()
@@ -29,7 +29,7 @@ def userinfo():
     # Convert the dictionary to a JSON-formatted string
     return jsonify(data_dict)
 
-@app.route('/friends', methods=['GET'])
+@app.route('/friends', methods=['POST'])
 def friends():
     friend_titles = connect.query("SHOW COLUMNS FROM Friends")
     data = request.get_json() #json body
