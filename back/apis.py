@@ -145,14 +145,23 @@ def repeat_events(start_date, days_of_week, max_repeats):
 
     while repeats < max_repeats:
         # Check if the current day of the week matches any specified days
-        if current_date.strftime('%a') in days_of_week.split():
+        if current_date.strftime('%a') in days_of_week:
             # Yield the date without the time portion
             yield current_date.strftime('%Y-%m-%d')
 
             repeats += 1
 
-        # Move to the next day
-        current_date += timedelta(days=1)
+        # Move to the next day based on the specific days mentioned
+        if 'Mon' in days_of_week:
+            current_date += timedelta(days=1)
+        elif 'Tue' in days_of_week:
+            current_date += timedelta(days=1)
+        elif 'Wed' in days_of_week:
+            current_date += timedelta(days=1)
+        elif 'Thu' in days_of_week:
+            current_date += timedelta(days=1)
+        elif 'Fri' in days_of_week:
+            current_date += timedelta(days=1)
 
 @app.route('/api/registeredcourses', methods=['POST'])
 def registeredcourses():
