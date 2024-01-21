@@ -7,17 +7,18 @@
           :options="dropdownOptions1"
           label="Course Department"
           class="wider-dropdown q-mr-md"
-          @input="loadCourseNumbers"
         ></q-select>
+        <q-btn @click="loadCourseNumbers" label="Load Course Numbers" color="primary" class="q-ml-md" />
 
         <q-select
+          v-if="showSecondDropdown"
           v-model="selectedOption2"
           :options="dropdownOptions2"
           label="Course Number"
           class="wider-dropdown"
         ></q-select>
 
-        <q-btn @click="search" label="Search" color="primary" class="q-ml-md" />
+        <q-btn @click="searchSections" label="Search Sections" color="primary" class="q-ml-md" />
       </div>
     </q-card-section>
 
@@ -47,7 +48,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 
 export default {
   data() {
@@ -55,49 +56,57 @@ export default {
       selectedOption1: null,
       selectedOption2: null,
       dropdownOptions1: [
-        { label: 'CPSC', value: 'CPSC' },
-        { label: 'MATH', value: 'MATH' },
-        { label: 'STAT', value: 'STAT' },
+        { label: "CPSC", value: "CPSC" },
+        { label: "MATH", value: "MATH" },
+        { label: "STAT", value: "STAT" },
         // Add more options as needed
       ],
       dropdownOptions2: [],
       courses: [], // Add your course data here
       loading: false, // Indicates whether an API call is in progress
+      showSecondDropdown: false, // Flag to control the visibility of the second dropdown
     };
   },
   methods: {
     async loadCourseNumbers() {
-      console.log('Loading Coursesr')
+      console.log("Loading Courses");
+      console.log("Selected Department:", this.selectedOption1);
+
       this.loading = true; // Start loading spinner
       try {
         // Fetch course numbers based on the selected department
-        const response = await axios.post('/api/courses', {
-          department: this.selectedOption1,
+        console.log(this.selectedOption1.value)
+        const response = await axios.post("/api/courses", {
+          department: this.selectedOption1.value,
+
         });
+        console.log("Response:", response.data);
+
         this.dropdownOptions2 = response.data.courseNumbers;
+        this.showSecondDropdown = true; // Show the second dropdown after loading options
       } catch (error) {
-        console.error('Error fetching course numbers:', error);
+        console.error("Error fetching course numbers:", error);
       } finally {
         this.loading = false; // Stop loading spinner
       }
     },
-    async search() {
+    async searchSections() {
       // Add your search logic here
-      console.log('Search button clicked!');
-      console.log('Selected Option 1:', this.selectedOption1);
-      console.log('Selected Option 2:', this.selectedOption2);
+      console.log("Search button clicked!");
+      console.log("Selected Option 1:", this.selectedOption1);
+      console.log("Selected Option 2:", this.selectedOption2);
 
       this.loading = true; // Start loading spinner
       try {
         // Fetch courses based on selected options and update the 'courses' array
         // Replace the following line with your actual API call or data retrieval logic
         this.courses = [
-          { id: 1, title: 'Course 1', description: 'Description for Course 1' },
-          { id: 2, title: 'Course 2', description: 'Description for Course 2' },
+          { id: 1, title: "Course 1", description: "Description for Course 1" },
+          { id: 2, title: "Course 2", description: "Description for Course 2" },
           // Add more courses as needed
         ];
       } catch (error) {
-        console.error('Error fetching courses:', error);
+        console.error("Error fetching courses:", error);
       } finally {
         this.loading = false; // Stop loading spinner
       }
