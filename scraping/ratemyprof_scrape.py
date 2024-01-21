@@ -21,13 +21,21 @@ def find_prof_info(prof_name):
             prof_first = value["firstName"]
             prof_last = value["lastName"]
             school_name = json_data[school_id]["name"]
-            print(school_name == "University of British Columbia" and prof_first.lower() == name_list[0] and prof_last.lower() == name_list[1])
-            if school_name == "University of British Columbia" and prof_first == name_list[0] and prof_last == name_list[1]:
+            num_ratings = value["numRatings"]
+            if num_ratings > 0 and school_name == "University of British Columbia" and prof_first.lower() == name_list[0] and prof_last.lower() == name_list[1]:
                 avg_rating = value["avgRating"]
-                num_ratings = value["numRatings"]
                 avg_difficulty = value["avgDifficulty"]
-                print(avg_rating + ", " + num_ratings + ", " + avg_difficulty)
 
+    json_file_clean = {
+        "firstName": name_list[0],
+        "lastName": name_list[1],
+        "numRatings": num_ratings,
+        "avgRating": avg_rating,
+        "avgDifficulty": avg_difficulty
+    }
+
+    with open("data/rate_my_prof_data/" + name_list[0] + "_" + name_list[1] + ".json", 'w') as json_file:
+        json.dump(json_file_clean, json_file, indent=4)
 
     # prof_ids = []
     # for key, value in json_data.items():
@@ -49,3 +57,4 @@ def find_prof_info(prof_name):
 
 
 find_prof_info("Cinda Heeren")
+find_prof_info("Lynn Norman")
