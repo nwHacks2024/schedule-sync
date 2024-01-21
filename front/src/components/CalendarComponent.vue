@@ -20,33 +20,33 @@ export default defineComponent({
   data: () => ({
     events: [],
   }),
-  mounted() {
-    this.fetchSections();
-  },
-  methods: {
-    async fetchSections() {
-      try {
-        const response = await axios.post("/registeredcourses");
-        const sections = response.data;
+  // mounted() {
+  //   this.fetchSections();
+  // },
+  // methods: {
+  //   async fetchSections() {
+  //     try {
+  //       // const response = await axios.post("/registeredcourses");
+  //       const sections = response.data;
 
-        // Process sections and convert them to events
-        const newEvents = sections.map((section) => {
-          return {
-            start: section.startDate, // Replace with the actual start date property from your API
-            end: section.endDate, // Replace with the actual end date property from your API
-            title: section.title, // Replace with the actual title property from your API
-            content: section.content, // Replace with the actual content property from your API
-            class: section.eventClass, // Replace with the actual class property from your API
-            // Add other properties as needed
-          };
-        });
+  //       // Process sections and convert them to events
+  //       const newEvents = sections.map((section) => {
+  //         return {
+  //           start: section.startDate, // Replace with the actual start date property from your API
+  //           end: section.endDate, // Replace with the actual end date property from your API
+  //           title: section.title, // Replace with the actual title property from your API
+  //           content: section.content, // Replace with the actual content property from your API
+  //           class: section.eventClass, // Replace with the actual class property from your API
+  //           // Add other properties as needed
+  //         };
+  //       });
 
-        // Update the events array with the new events
-        this.events = newEvents;
-      } catch (error) {
-        console.error("Error fetching sections:", error);
-      }
-    },
-  },
+  //       // Update the events array with the new events
+  //       this.events = newEvents;
+  //     } catch (error) {
+  //       console.error("Error fetching sections:", error);
+  //     }
+  //   },
+  // },
 });
 </script>

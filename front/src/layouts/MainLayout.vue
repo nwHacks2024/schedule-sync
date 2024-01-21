@@ -17,6 +17,7 @@
         <q-route-tab to="/page1" label="Your Schedule" />
         <q-route-tab to="/page2" label="Degree Navigator" />
         <q-route-tab to="/page3" label="Friend Schedules" />
+        <FriendsDropdown />
       </q-tabs>
     </q-header>
 
@@ -42,30 +43,20 @@
       bordered
       class="my-drawer bg-secondary"
     >
-      <q-list>
-        <router-link to="/friends" class="router-link">
-          <q-item clickable v-ripple style="height: 60px" class="bubble-item">
-            <q-item-section>
-              <q-item-label class="center-text">Friends</q-item-label>
-            </q-item-section>
-            <q-item-section >
-              <q-icon name="person" size="lg" />
-            </q-item-section>
-          </q-item>
-        </router-link>
-        <ProfileComponent />
-      </q-list>
+     <MenuComponent />
     </q-drawer>
   </q-layout>
 </template>
 
 <script>
 import { ref } from "vue";
-import ProfileComponent from '../components/ProfileComponent.vue'
+import MenuComponent from '../components/MenuComponent.vue'
+import FriendsDropdown from "../components/FriendsDropdown.vue";
 
 export default {
   components: {
-    ProfileComponent
+    MenuComponent,
+    FriendsDropdown
   },
   setup() {
     const rightDrawerOpen = ref(false);

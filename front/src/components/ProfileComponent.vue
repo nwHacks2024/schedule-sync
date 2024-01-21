@@ -34,7 +34,7 @@ export default {
       try {
         // Assuming the /api/userprofile endpoint returns the user profile data
         const response = await axios.post('/api/userprofile', {
-          username: 'test1',
+          username: 'dfroberg',
         });
         const userData = response.data;
 
