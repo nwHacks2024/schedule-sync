@@ -7,7 +7,7 @@ import register
 app = Flask(__name__)
 
 
-@app.route('/api/api/userprofile', methods=['POST'])
+@app.route('/api/userprofile', methods=['POST'])
 def userinfo():
     titles = connect.query("SHOW COLUMNS FROM Students")
     data = request.get_json()
@@ -34,7 +34,7 @@ def userinfo():
     # Convert the dictionary to a JSON-formatted string
     return jsonify(data_dict)
 
-@app.route('/api/api/friends', methods=['POST'])
+@app.route('/api/friends', methods=['POST'])
 def friends():
     friend_titles = connect.query("SHOW COLUMNS FROM Friends")
     data = request.get_json() #json body
@@ -71,7 +71,7 @@ def friends():
     # Convert the dictionary to a JSON-formatted string
     return jsonify(dictionary)
 
-# @app.route('/api/api/registeredcourses', methods=['POST'])
+# @app.route('/api/registeredcourses', methods=['POST'])
 # def registeredcourses():
 #     data = request.get_json() #json body
 
@@ -163,7 +163,7 @@ def repeat_events(start_date, days_of_week, max_repeats):
         elif 'Fri' in days_of_week:
             current_date += timedelta(days=1)
 
-@app.route('/api/api/registeredcourses', methods=['POST'])
+@app.route('/api/registeredcourses', methods=['POST'])
 def registeredcourses():
     data = request.get_json()
 
