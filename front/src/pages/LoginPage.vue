@@ -6,7 +6,7 @@
     </div>
     <LoginCard v-if="isButtonClicked && !isNewUser" />
     <RegisterCard v-if="isButtonClicked && isNewUser" />
-    <button v-if="isButtonClicked" class="user-button" @click="goBack">Back</button>
+<!--    <button v-if="isButtonClicked" class="user-button" @click="goBack">Back</button>-->
   </div>
 </template>
 

@@ -5,7 +5,7 @@
     events-count-on-year-view
     :events="events"
     :disable-views="['years', 'year', 'month']"
-    style="height: 600px"
+    style="height: 600px; width: 1200px"
   />
 </template>
 
