@@ -159,12 +159,12 @@ export default {
     async registerSection(section) {
       try {
         // Replace the following line with your actual API endpoint and payload
-        console.log(section.courseDept);
+        console.log(section.id);
         const response = await axios.post("/api/addcourse", {
           username: "dfroberg",
           courseNum: section.courseNum,
           courseDept: section.courseDept,
-          section: section.id,
+          section: section.section,
         });
       } catch (error) {
         console.error("Error adding course:", error);
