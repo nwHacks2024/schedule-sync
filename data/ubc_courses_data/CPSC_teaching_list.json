@@ -1,0 +1,1899 @@
+[
+  {
+    "dept": "CPSC",
+    "course_num": "100",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "OLUWAKEMI OLA"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "100",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "OLUWAKEMI OLA"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "100",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "OLUWAKEMI OLA"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "100",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "OLUWAKEMI OLA"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "103",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "IAN MITCHELL"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "103",
+    "section_num": "102",
+    "year": "2023/2024",
+    "name": "HENDRIK BLOK"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "103",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "IAN MITCHELL"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "103",
+    "section_num": "1W2",
+    "year": "2023/2024",
+    "name": "HENDRIK BLOK"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "103",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "GIULIA TOTI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "103",
+    "section_num": "202",
+    "year": "2023/2024",
+    "name": "GIULIA TOTI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "103",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "GIULIA TOTI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "103",
+    "section_num": "2W2",
+    "year": "2023/2024",
+    "name": "GIULIA TOTI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "103",
+    "section_num": "V01",
+    "year": "2023/2024",
+    "name": "JESSICA WONG"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "107",
+    "section_num": "207",
+    "year": "2023/2024",
+    "name": "HENDRIK BLOK"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "107",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "HENDRIK BLOK"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "110",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "GREGOR KICZALES"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "110",
+    "section_num": "102",
+    "year": "2023/2024",
+    "name": "GREGOR KICZALES"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "110",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "GREGOR KICZALES"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "110",
+    "section_num": "1W2",
+    "year": "2023/2024",
+    "name": "GREGOR KICZALES"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "110",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "NORMAN HUTCHINSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "110",
+    "section_num": "203",
+    "year": "2023/2024",
+    "name": "NORMAN HUTCHINSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "110",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "NORMAN HUTCHINSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "110",
+    "section_num": "2W3",
+    "year": "2023/2024",
+    "name": "NORMAN HUTCHINSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "121",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "SEYYED HOSSEINI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "121",
+    "section_num": "102",
+    "year": "2023/2024",
+    "name": "DE MOCHETTI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "121",
+    "section_num": "103",
+    "year": "2023/2024",
+    "name": "DE MOCHETTI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "121",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "SEYYED HOSSEINI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "121",
+    "section_num": "1W2",
+    "year": "2023/2024",
+    "name": "DE MOCHETTI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "121",
+    "section_num": "1W3",
+    "year": "2023/2024",
+    "name": "DE MOCHETTI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "121",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "DE MOCHETTI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "121",
+    "section_num": "202",
+    "year": "2023/2024",
+    "name": "DE MOCHETTI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "121",
+    "section_num": "203",
+    "year": "2023/2024",
+    "name": "DE MOCHETTI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "121",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "DE MOCHETTI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "121",
+    "section_num": "2W2",
+    "year": "2023/2024",
+    "name": "DE MOCHETTI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "121",
+    "section_num": "2W3",
+    "year": "2023/2024",
+    "name": "DE MOCHETTI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "203",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "FIRAS MOOSVI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "203",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "FIRAS MOOSVI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "210",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "PAUL CARTER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "210",
+    "section_num": "102",
+    "year": "2023/2024",
+    "name": "PAUL CARTER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "210",
+    "section_num": "103",
+    "year": "2023/2024",
+    "name": "MEHRDAD OVEISI-FORDOEI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "210",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "PAUL CARTER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "210",
+    "section_num": "1W2",
+    "year": "2023/2024",
+    "name": "PAUL CARTER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "210",
+    "section_num": "1W3",
+    "year": "2023/2024",
+    "name": "MEHRDAD OVEISI-FORDOEI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "210",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "FELIX GRUND"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "210",
+    "section_num": "202",
+    "year": "2023/2024",
+    "name": "FIRAS MOOSVI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "210",
+    "section_num": "203",
+    "year": "2023/2024",
+    "name": "FELIX GRUND"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "210",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "FELIX GRUND"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "210",
+    "section_num": "2W2",
+    "year": "2023/2024",
+    "name": "FIRAS MOOSVI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "210",
+    "section_num": "2W3",
+    "year": "2023/2024",
+    "name": "FELIX GRUND"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "213",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "JORDON JOHNSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "213",
+    "section_num": "102",
+    "year": "2023/2024",
+    "name": "MICHAEL FEELEY"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "213",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "JORDON JOHNSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "213",
+    "section_num": "1W2",
+    "year": "2023/2024",
+    "name": "MICHAEL FEELEY"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "213",
+    "section_num": "203",
+    "year": "2023/2024",
+    "name": "GEOFFREY TIEN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "213",
+    "section_num": "204",
+    "year": "2023/2024",
+    "name": "GEOFFREY TIEN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "213",
+    "section_num": "205",
+    "year": "2023/2024",
+    "name": "JORDON JOHNSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "213",
+    "section_num": "2W3",
+    "year": "2023/2024",
+    "name": "GEOFFREY TIEN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "213",
+    "section_num": "2W4",
+    "year": "2023/2024",
+    "name": "GEOFFREY TIEN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "213",
+    "section_num": "2W5",
+    "year": "2023/2024",
+    "name": "JORDON JOHNSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "221",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "VSEVOLOD LYNOV"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "221",
+    "section_num": "102",
+    "year": "2023/2024",
+    "name": "GEOFFREY TIEN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "221",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "VSEVOLOD LYNOV"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "221",
+    "section_num": "1W2",
+    "year": "2023/2024",
+    "name": "GEOFFREY TIEN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "221",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "VSEVOLOD LYNOV"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "221",
+    "section_num": "202",
+    "year": "2023/2024",
+    "name": "GEOFFREY TIEN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "221",
+    "section_num": "203",
+    "year": "2023/2024",
+    "name": "VSEVOLOD LYNOV"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "221",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "VSEVOLOD LYNOV"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "221",
+    "section_num": "2W2",
+    "year": "2023/2024",
+    "name": "GEOFFREY TIEN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "221",
+    "section_num": "2W3",
+    "year": "2023/2024",
+    "name": "VSEVOLOD LYNOV"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "259",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "GEOFFREY TIEN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "259",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "GEOFFREY TIEN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "302",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "CHEN GREIF"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "302",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "CHEN GREIF"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "303",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "JOEL FRIEDMAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "303",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "JOEL FRIEDMAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "304",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "RACHEL POTTINGER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "304",
+    "section_num": "102",
+    "year": "2023/2024",
+    "name": "GITTU GEORGE"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "304",
+    "section_num": "103",
+    "year": "2023/2024",
+    "name": "VSEVOLOD LYNOV"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "304",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "RACHEL POTTINGER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "304",
+    "section_num": "1W2",
+    "year": "2023/2024",
+    "name": "JESSICA WONG"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "304",
+    "section_num": "1W3",
+    "year": "2023/2024",
+    "name": "VSEVOLOD LYNOV"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "304",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "VSEVOLOD LYNOV"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "304",
+    "section_num": "202",
+    "year": "2023/2024",
+    "name": "RAYMOND NG"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "304",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "RAYMOND NG"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "304",
+    "section_num": "2W2",
+    "year": "2023/2024",
+    "name": "VSEVOLOD LYNOV"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "310",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "REID HOLMES"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "310",
+    "section_num": "102",
+    "year": "2023/2024",
+    "name": "REID HOLMES"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "310",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "REID HOLMES"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "310",
+    "section_num": "1W2",
+    "year": "2023/2024",
+    "name": "REID HOLMES"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "310",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "NICHOLAS BRADLEY"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "310",
+    "section_num": "202",
+    "year": "2023/2024",
+    "name": "NICHOLAS BRADLEY"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "310",
+    "section_num": "203",
+    "year": "2023/2024",
+    "name": "NICHOLAS BRADLEY"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "310",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "NICHOLAS BRADLEY"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "310",
+    "section_num": "2W2",
+    "year": "2023/2024",
+    "name": "NICHOLAS BRADLEY"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "310",
+    "section_num": "2W3",
+    "year": "2023/2024",
+    "name": "NICHOLAS BRADLEY"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "311",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "RONALD GARCIA"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "311",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "RONALD GARCIA"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "312",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "DAVID POOLE"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "312",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "DAVID POOLE"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "313",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "NORMAN HUTCHINSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "313",
+    "section_num": "102",
+    "year": "2023/2024",
+    "name": "NORMAN HUTCHINSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "313",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "NORMAN HUTCHINSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "313",
+    "section_num": "1W2",
+    "year": "2023/2024",
+    "name": "NORMAN HUTCHINSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "313",
+    "section_num": "203",
+    "year": "2023/2024",
+    "name": "STEVEN WOLFMAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "313",
+    "section_num": "204",
+    "year": "2023/2024",
+    "name": "STEVEN WOLFMAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "313",
+    "section_num": "2W3",
+    "year": "2023/2024",
+    "name": "STEVEN WOLFMAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "313",
+    "section_num": "2W4",
+    "year": "2023/2024",
+    "name": "STEVEN WOLFMAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "314",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "DE VAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "314",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "DE VAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "314",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "DINESH PAI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "314",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "DINESH PAI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "317",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "NORMAN HUTCHINSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "317",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "NORMAN HUTCHINSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "317",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "NORMAN HUTCHINSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "317",
+    "section_num": "202",
+    "year": "2023/2024",
+    "name": "AASTHA MEHTA"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "317",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "NORMAN HUTCHINSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "317",
+    "section_num": "2W2",
+    "year": "2023/2024",
+    "name": "AASTHA MEHTA"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "319",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "JERRY JIM"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "319",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "JERRY JIM"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "320",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "ANNE CONDON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "320",
+    "section_num": "102",
+    "year": "2023/2024",
+    "name": "ANNE CONDON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "320",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "ANNE CONDON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "320",
+    "section_num": "1W2",
+    "year": "2023/2024",
+    "name": "ANNE CONDON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "320",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "SUSANNE BRADLEY"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "320",
+    "section_num": "202",
+    "year": "2023/2024",
+    "name": "FREDERICK SHEPHERD"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "320",
+    "section_num": "203",
+    "year": "2023/2024",
+    "name": "SUSANNE BRADLEY"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "320",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "SUSANNE BRADLEY"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "320",
+    "section_num": "2W2",
+    "year": "2023/2024",
+    "name": "FREDERICK SHEPHERD"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "320",
+    "section_num": "2W3",
+    "year": "2023/2024",
+    "name": "SUSANNE BRADLEY"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "322",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "JORDON JOHNSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "322",
+    "section_num": "102",
+    "year": "2023/2024",
+    "name": "JORDON JOHNSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "322",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "JORDON JOHNSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "322",
+    "section_num": "1W2",
+    "year": "2023/2024",
+    "name": "JORDON JOHNSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "322",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "MEHRDAD OVEISI-FORDOEI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "322",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "MEHRDAD OVEISI-FORDOEI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "330",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "ANDREW ROTH"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "330",
+    "section_num": "102",
+    "year": "2023/2024",
+    "name": "VARADA KOLHATKAR"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "330",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "ANDREW ROTH"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "330",
+    "section_num": "1W2",
+    "year": "2023/2024",
+    "name": "VARADA KOLHATKAR"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "330",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "MATHIAS LECUYER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "330",
+    "section_num": "202",
+    "year": "2023/2024",
+    "name": "MEHRDAD OVEISI-FORDOEI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "330",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "MATHIAS LECUYER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "330",
+    "section_num": "2W2",
+    "year": "2023/2024",
+    "name": "MEHRDAD OVEISI-FORDOEI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "340",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "JEFFREY CLUNE"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "340",
+    "section_num": "102",
+    "year": "2023/2024",
+    "name": "JEFFREY CLUNE"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "340",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "JEFFREY CLUNE"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "340",
+    "section_num": "1W2",
+    "year": "2023/2024",
+    "name": "JEFFREY CLUNE"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "340",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "JEFFREY CLUNE"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "340",
+    "section_num": "202",
+    "year": "2023/2024",
+    "name": "JEFFREY CLUNE"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "340",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "JEFFREY CLUNE"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "340",
+    "section_num": "2W2",
+    "year": "2023/2024",
+    "name": "JEFFREY CLUNE"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "344",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "ANIKA SAYARA"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "344",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "ANIKA SAYARA"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "344",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "LAURA CANG"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "344",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "LAURA CANG"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "349",
+    "section_num": "001",
+    "year": "2023/2024",
+    "name": "MARK GREENSTREET"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "368",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "JESSICA WONG"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "368",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "JESSICA WONG"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "404",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "EDWIN KNORR"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "404",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "EDWIN KNORR"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "404",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "JIANHAO CAO"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "404",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "JIANHAO CAO"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "406",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "MICHAEL FRIEDLANDER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "406",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "MICHAEL FRIEDLANDER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "410",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "CAROLINE LEMIEUX"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "410",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "CAROLINE LEMIEUX"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "416",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "WILLIAM MASON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "416",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "WILLIAM MASON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "416",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "ARPAN GUJARATI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "416",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "ARPAN GUJARATI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "418",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "MARK GREENSTREET"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "418",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "MARK GREENSTREET"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "418",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "MARK GREENSTREET"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "418",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "MARK GREENSTREET"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "420",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "WILLIAM EVANS"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "420",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "WILLIAM EVANS"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "421",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "JOEL FRIEDMAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "421",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "JOEL FRIEDMAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "422",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "JORDON JOHNSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "422",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "JORDON JOHNSON"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "425",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "MATTHEW BROWN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "425",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "MATTHEW BROWN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "425",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "KWANG YI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "425",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "KWANG YI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "427",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "HELGE RHODIN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "427",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "HELGE RHODIN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "427",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "CHRIS KERSLAKE"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "427",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "CHRIS KERSLAKE"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "430",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "GIULIA TOTI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "430",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "GIULIA TOTI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "430",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "HEDAYAT ZARKOOB"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "430",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "HEDAYAT ZARKOOB"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "436A",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "THOMAS PASQUIER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "436A",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "THOMAS PASQUIER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "436C",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "MARYAM RAIYAT"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "436C",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "MARYAM RAIYAT"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "436C",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "MARYAM RAIYAT"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "436C",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "MARYAM RAIYAT"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "436E",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "FRANK WOOD"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "436E",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "FRANK WOOD"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "436N",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "VERED SHWARTZ"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "436N",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "VERED SHWARTZ"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "436R",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "NICHOLAS HARVEY"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "436R",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "NICHOLAS HARVEY"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "436S",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "BO XIAO"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "436S",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "BO XIAO"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "440",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "DANICA SUTHERLAND"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "440",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "DANICA SUTHERLAND"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "444",
+    "section_num": "L2A",
+    "year": "2023/2024",
+    "name": "SANG-WHA SIEN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "444",
+    "section_num": "L2B",
+    "year": "2023/2024",
+    "name": "SANG-WHA SIEN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "444",
+    "section_num": "L2C",
+    "year": "2023/2024",
+    "name": "SANG-WHA SIEN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "444",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "SANG-WHA SIEN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "447",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "TAMARA MUNZNER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "447",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "TAMARA MUNZNER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "448C",
+    "section_num": "001",
+    "year": "2023/2024",
+    "name": "PAUL CARTER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "501",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "JOEL FRIEDMAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "504",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "RACHEL POTTINGER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "504",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "RACHEL POTTINGER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "508",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "RETO ACHERMANN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "508",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "RETO ACHERMANN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "509",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "RONALD GARCIA"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "509",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "RONALD GARCIA"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "521",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "MARK GREENSTREET"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "521",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "MARK GREENSTREET"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "522",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "DAVID POOLE"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "522",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "DAVID POOLE"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "524",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "ALLA SHEFFER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "524",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "ALLA SHEFFER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "532C",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "CRISTINA CONATI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "532C",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "CRISTINA CONATI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "532D",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "DANICA SUTHERLAND"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "532D",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "DANICA SUTHERLAND"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "532V",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "VERED SHWARTZ"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "532V",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "VERED SHWARTZ"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "532Y",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "MATHIAS LECUYER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "532Y",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "MATHIAS LECUYER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "533V",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "DE VAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "533V",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "DE VAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "533Y",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "KWANG YI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "533Y",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "KWANG YI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "536E",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "WILLIAM EVANS"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "536M",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "MICHAEL FRIEDLANDER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "536M",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "MICHAEL FRIEDLANDER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "536S",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "FREDERICK SHEPHERD"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "536S",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "FREDERICK SHEPHERD"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "536W",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "DAOCHEN WANG"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "536W",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "DAOCHEN WANG"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "538G",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "ARPAN GUJARATI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "538L",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "MATHIAS LECUYER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "538L",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "MATHIAS LECUYER"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "538S",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "CRISTIE FORD"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "539B",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "WILLIAM BOWMAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "539B",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "WILLIAM BOWMAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "539S",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "ALEXANDER SUMMERS"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "539S",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "ALEXANDER SUMMERS"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "540",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "JEFFREY CLUNE"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "540",
+    "section_num": "102",
+    "year": "2023/2024",
+    "name": "JEFFREY CLUNE"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "540",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "JEFFREY CLUNE"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "540",
+    "section_num": "1W2",
+    "year": "2023/2024",
+    "name": "JEFFREY CLUNE"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "543",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "KARON MACLEAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "543",
+    "section_num": "L2A",
+    "year": "2023/2024",
+    "name": "KARON MACLEAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "543",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "KARON MACLEAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "543",
+    "section_num": "LWA",
+    "year": "2023/2024",
+    "name": "KARON MACLEAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "544",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "KARON MACLEAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "544",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "KARON MACLEAN"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "545",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "JIARUI DING"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "545",
+    "section_num": "1W1",
+    "year": "2023/2024",
+    "name": "JIARUI DING"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "550",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "DANICA SUTHERLAND"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "554C",
+    "section_num": "201",
+    "year": "2023/2024",
+    "name": "CRISTINA CONATI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "554C",
+    "section_num": "2W1",
+    "year": "2023/2024",
+    "name": "CRISTINA CONATI"
+  },
+  {
+    "dept": "CPSC",
+    "course_num": "554X",
+    "section_num": "101",
+    "year": "2023/2024",
+    "name": "BO XIAO"
+  }
+]
