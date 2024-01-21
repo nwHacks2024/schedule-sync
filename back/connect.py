@@ -23,10 +23,6 @@ def query(sql_query: str):
     results = cursor.fetchall()
     connection.commit()
 
-    # # Print the results
-    # for result in results:
-    #     print(result)
-
     # Close the cursor and connection
     cursor.close()
     connection.close()
