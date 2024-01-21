@@ -244,7 +244,7 @@ def login():
     if count == 0:
         return jsonify({'error': 'Username does not exist'}), 400
 
-    if(register.authenticate_user(username, password)):
+    if(reg.authenticate_user(username, password)):
         return jsonify({'success': 'Login successful'}), 200
     else:
         return jsonify({'error': 'Invalid credentials'}), 401
