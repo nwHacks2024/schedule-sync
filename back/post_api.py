@@ -23,7 +23,7 @@ def addcourse():
 
     try:
         connect.query(f"INSERT INTO Enrolled VALUES ('{data['username']}', '{term}', '{data['section']}', '{data['courseNum']}', '{data['courseDept']}')")
-        return jsonify({'success': 'Course added'}), 200
+        return jsonify({'success': 'Course section added'}), 200
     except:
         return jsonify({'error': 'Invalid course addition'}), 400
 
@@ -58,6 +58,7 @@ def addfriend():
 
     try:
         connect.query(f"INSERT INTO Friends VALUES ('{data['username']}', '{data['friendUsername']}')")
+        connect.query(f"INSERT INTO Friends VALUES ('{data['friendUsername']}', '{data['username']}')")
         return jsonify({'success': 'Friend made'}), 200
     except:
         return jsonify({'error': 'Could not make friend'}), 400
