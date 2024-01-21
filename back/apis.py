@@ -7,7 +7,7 @@ import register
 app = Flask(__name__)
 
 
-@app.route('/api/userprofile', methods=['POST'])
+@app.route('/api/api/userprofile', methods=['POST'])
 def userinfo():
     titles = connect.query("SHOW COLUMNS FROM Students")
     data = request.get_json()
@@ -34,7 +34,7 @@ def userinfo():
     # Convert the dictionary to a JSON-formatted string
     return jsonify(data_dict)
 
-@app.route('/api/friends', methods=['POST'])
+@app.route('/api/api/friends', methods=['POST'])
 def friends():
     friend_titles = connect.query("SHOW COLUMNS FROM Friends")
     data = request.get_json() #json body
@@ -71,7 +71,7 @@ def friends():
     # Convert the dictionary to a JSON-formatted string
     return jsonify(dictionary)
 
-# @app.route('/api/registeredcourses', methods=['POST'])
+# @app.route('/api/api/registeredcourses', methods=['POST'])
 # def registeredcourses():
 #     data = request.get_json() #json body
 
@@ -163,7 +163,7 @@ def repeat_events(start_date, days_of_week, max_repeats):
         elif 'Fri' in days_of_week:
             current_date += timedelta(days=1)
 
-@app.route('/api/registeredcourses', methods=['POST'])
+@app.route('/api/api/registeredcourses', methods=['POST'])
 def registeredcourses():
     data = request.get_json()
 
@@ -225,7 +225,7 @@ def registeredcourses():
 
     return jsonify(response_dict)
 
-@app.route('/login', methods=['POST'])
+@app.route('/api/login', methods=['POST'])
 def login():
     data = request.get_json() #json body
     if 'username' not in data:
@@ -245,7 +245,7 @@ def login():
     else:
         return jsonify({'error': 'Invalid credentials'}), 401
 
-@app.route('/users', methods=['POST'])
+@app.route('/api/users', methods=['POST'])
 def users():
     data = request.get_json()
     if 'username' not in data:
@@ -284,7 +284,7 @@ def users():
 
     return jsonify(dictionary), 200
 
-@app.route('/degreeinfo', methods=['POST'])
+@app.route('/api/degreeinfo', methods=['POST'])
 def degreeinfo():
     data = request.get_json()
     if 'username' not in data:
@@ -328,7 +328,7 @@ def degreeinfo():
 
     return jsonify(dictionary), 200
 
-@app.route('/courses', methods=['POST'])
+@app.route('/api/courses', methods=['POST'])
 def courses():
     data = request.get_json()
     if 'department' not in data:
@@ -365,7 +365,7 @@ def courses():
 
     return jsonify(dictionary), 200
 
-@app.route('/sections', methods=['POST'])
+@app.route('/api/sections', methods=['POST'])
 def sections():
     data = request.get_json()
     if 'courseNum' not in data:
@@ -406,7 +406,7 @@ def sections():
     return jsonify(dictionary), 200
 
 
-@app.route('/sectioninfo', methods=['POST'])
+@app.route('/api/sectioninfo', methods=['POST'])
 def sectioninfo():
     data = request.get_json()
     if 'courseNum' not in data:
@@ -472,7 +472,7 @@ WHERE
 
     return jsonify(data_dict), 200
 
-@app.route('/removecourse', methods=['DELETE'])
+@app.route('/api/removecourse', methods=['DELETE'])
 def removecourse():
     data = request.get_json() #json body
     if 'username' not in data:
@@ -491,7 +491,7 @@ def removecourse():
     except:
         return jsonify({'error': 'Invalid course deletion'}), 400
 
-@app.route('/removefriend', methods=['DELETE'])
+@app.route('/api/removefriend', methods=['DELETE'])
 def removefriend():
     data = request.get_json() #json body
     if 'username' not in data:
@@ -506,7 +506,7 @@ def removefriend():
     except:
         return jsonify({'error': 'Could not remove friend'}), 400
 
-@app.route('/addcourse', methods=['POST'])
+@app.route('/api/addcourse', methods=['POST'])
 def addcourse():
     data = request.get_json() #json body
     if 'username' not in data:
@@ -527,7 +527,7 @@ def addcourse():
         return jsonify({'error': 'Invalid course addition'}), 400
 
 
-@app.route('/register', methods=['POST'])
+@app.route('/api/register', methods=['POST'])
 def register():
     data = request.get_json() #json body
     first_name = ""
@@ -547,7 +547,7 @@ def register():
     except:
         return jsonify({'error': 'Could not register user'}), 400
 
-@app.route('/addfriend', methods=['POST'])
+@app.route('/api/addfriend', methods=['POST'])
 def addfriend():
     data = request.get_json() #json body
     if 'username' not in data:
