@@ -1,14 +1,15 @@
 # Hackathon App (front)
 
-A Quasar Project
+
+cd front
 
 ##  Initialize Quasar CLI
+```bash
 npm i -g @quasar/cli
-
+```
 
 ## Install the dependencies
 ```bash
-
 npm install
 ```
 
@@ -17,6 +18,7 @@ npm install
 quasar dev
 ```
 
+## Commands below here are not necessary for dev
 
 ### Lint the files
 ```bash
