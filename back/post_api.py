@@ -63,5 +63,6 @@ def addfriend():
     except:
         return jsonify({'error': 'Could not make friend'}), 400
 
+
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
