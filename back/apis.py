@@ -340,7 +340,7 @@ def sectioninfo():
         return jsonify({'error': 'Course does not exist'}), 400
 
 
-    sql_query = sql_query = f"""
+    sql_query = f"""
 SELECT
     Teaches.profName,
     Teaches.profDept,
@@ -358,18 +358,14 @@ INNER JOIN
               AND Teaches.section = Sections.section
               AND Teaches.courseNum = Sections.courseNum
               AND Teaches.courseDept = Sections.courseDept
+WHERE
+    Sections.courseNum = '{courseNum}'
+    AND Sections.courseDept = '{courseDept}'
+    AND Sections.section = '{sectionNum}'
+    AND Sections.term = '{term}';
 """
 
     results = connect.query(sql_query)
-    # section_results = connect.query(f"SELECT * FROM Sections WHERE courseNum = '{courseNum}'"
-    #                              f" AND courseDept = '{courseDept}'"
-    #                              f" AND section = '{sectionNum}'"
-    #                              f" AND term = '{term}'")
-    #
-    # teaches_results = connect.query(f"SELECT * FROM Teaches WHERE courseNum = '{courseNum}'"
-    #                              f" AND courseDept = '{courseDept}'"
-    #                              f" AND section = '{sectionNum}'"
-    #                              f" AND term = '{term}'")
 
     section_titles = connect.query("SHOW COLUMNS FROM Sections")
     prof_titles = connect.query("SHOW COLUMNS FROM Professors")
@@ -391,6 +387,95 @@ INNER JOIN
 
     return jsonify(data_dict), 200
 
+@app.route('/removecourse', methods=['DELETE'])
+def removecourse():
+    data = request.get_json() #json body
+    if 'username' not in data:
+        return jsonify({'error': 'Missing username field'}), 400
+    elif 'section' not in data:
+        return jsonify({'error': 'Missing section field'}), 400
+    elif 'courseNum' not in data:
+        return jsonify({'error': 'Missing courseNum field'}), 400
+    elif 'courseDept' not in data:
+        return jsonify({'error': 'Missing courseDept field'}), 400
+
+    term = "2023W2"
+    try:
+        connect.query(f"DELETE FROM Enrolled WHERE username='{data['username']}' AND term='{term}' AND section='{data['section']}' AND courseNum='{data['courseNum']}' AND courseDept='{data['courseDept']}'")
+        return jsonify({'success': 'Course section deleted!'}), 200
+    except:
+        return jsonify({'error': 'Invalid course deletion'}), 400
+
+@app.route('/removefriend', methods=['DELETE'])
+def removefriend():
+    data = request.get_json() #json body
+    if 'username' not in data:
+        return jsonify({'error': 'Missing username field'}), 400
+    elif 'friendUsername' not in data:
+        return jsonify({'error': 'Missing friendUsername field'}), 400
+
+    try:
+        connect.query(f"DELETE FROM Friends WHERE username='{data['username']}' AND friendUsername='{data['friendUsername']}'")
+        connect.query(f"DELETE FROM Friends WHERE username='{data['friendUsername']}' AND friendUsername='{data['username']}'")
+        return jsonify({'success': 'Friend removed'}), 200
+    except:
+        return jsonify({'error': 'Could not remove friend'}), 400
+
+@app.route('/addcourse', methods=['POST'])
+def addcourse():
+    data = request.get_json() #json body
+    if 'username' not in data:
+        return jsonify({'error': 'Missing username field'}), 400
+    elif 'section' not in data:
+        return jsonify({'error': 'Missing section field'}), 400
+    elif 'courseNum' not in data:
+        return jsonify({'error': 'Missing courseNum field'}), 400
+    elif 'courseDept' not in data:
+        return jsonify({'error': 'Missing courseDept field'}), 400
+
+    term = "2023W2"
+
+    try:
+        connect.query(f"INSERT INTO Enrolled VALUES ('{data['username']}', '{term}', '{data['section']}', '{data['courseNum']}', '{data['courseDept']}')")
+        return jsonify({'success': 'Course section added'}), 200
+    except:
+        return jsonify({'error': 'Invalid course addition'}), 400
+
+
+@app.route('/register', methods=['POST'])
+def register():
+    data = request.get_json() #json body
+    first_name = ""
+    last_name = ""
+    if 'username' not in data:
+        return jsonify({'error': 'Missing username field'}), 400
+    elif 'password' not in data:
+        return jsonify({'error': 'Missing password field'}), 400
+    elif 'firstName' in data:
+        first_name = data['firstName']
+    elif 'lastName' in data:
+        last_name = data['lastName']
+
+    try:
+        register.register_user(data['username'], data['password'], f'{first_name}', f'{last_name}')
+        return jsonify({'success': 'User registered'}), 200
+    except:
+        return jsonify({'error': 'Could not register user'}), 400
+
+@app.route('/addfriend', methods=['POST'])
+def addfriend():
+    data = request.get_json() #json body
+    if 'username' not in data:
+        return jsonify({'error': 'Missing username field'}), 400
+    elif 'friendUsername' not in data:
+        return jsonify({'error': 'Missing friendUsername field'}), 400
+
+    try:
+        connect.query(f"INSERT INTO Friends VALUES ('{data['username']}', '{data['friendUsername']}')")
+        connect.query(f"INSERT INTO Friends VALUES ('{data['friendUsername']}', '{data['username']}')")
+        return jsonify({'success': 'Friend made'}), 200
+    except:
+        return jsonify({'error': 'Could not make friend'}), 400
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
