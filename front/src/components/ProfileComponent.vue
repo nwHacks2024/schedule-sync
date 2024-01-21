@@ -1,12 +1,14 @@
 <template>
   <div class="profile-page">
     <div class="profile-card">
-      <img class="avatar" src="/public/icons/defaultprofile.png" alt="User Avatar" />
-      <h2 class="username">{{ userProfile.username }}</h2>
-      <p class="firstName">{{ userProfile.firstName }}</p>
-      <p class="lastName">{{ userProfile.lastName }}</p>
-      <p class="faculty">{{ userProfile.faculty }}</p>
-      <p class="degreeName">{{ userProfile.degreeName }}</p>
+      <q-spinner-gears v-if="loading" size="50px"></q-spinner-gears>
+
+      <img class="avatar" v-else src="/public/icons/defaultprofile.png" alt="User Avatar" />
+      <h2 class="username" v-if="!loading">{{ userProfile.username }}</h2>
+      <p class="firstName" v-if="!loading">{{ userProfile.firstName }}</p>
+      <p class="lastName" v-if="!loading">{{ userProfile.lastName }}</p>
+      <p class="faculty" v-if="!loading">{{ userProfile.faculty }}</p>
+      <p class="degreeName" v-if="!loading">{{ userProfile.degreeName }}</p>
     </div>
   </div>
 </template>
@@ -18,13 +20,13 @@ export default {
   data() {
     return {
       userProfile: {
-        username: 'johndoe',
-        email: 'johndoe@example.com',
-        firstName: 'John',
-        lastName: 'Doe',
-        faculty: 'Engineering',
-        degreeName: 'Computer Science',
+        username: '',
+        firstName: '',
+        lastName: '',
+        faculty: '',
+        degreeName: '',
       },
+      loading: true, // Set loading to true initially
     };
   },
   mounted() {
@@ -35,7 +37,7 @@ export default {
       try {
         // Assuming the /api/userprofile endpoint returns the user profile data
         const response = await axios.post('/api/userprofile', {
-          username: 'test1',
+          username: 'dfroberg',
         });
         const userData = response.data;
 
@@ -48,6 +50,8 @@ export default {
         this.userProfile.degreeName = userData.degreeName;
       } catch (error) {
         console.error('Error fetching user profile:', error);
+      } finally {
+        this.loading = false; // Set loading back to false regardless of success or error
       }
     },
   },
