@@ -45,7 +45,7 @@
 
   <script>
   import axios from "axios";
-  import {useRouter} from "vue-router";
+  // import {useRouter} from "vue-router";
 
   export default {
   data() {
@@ -69,18 +69,17 @@
 
         // Handle the response as needed
         console.log('User registered successfully:', response.data);
+        this.$router.push('/main');
       } catch (error) {
         // Handle errors
         console.error('Error registering user:', error.response ? error.response.data : error.message);
       }
     },
-    goBack() { // TODO make this work
-      // Get the router instance
-      const router = useRouter();
+    goBack() {
+      this.$emit('goBack');
 
-      // Navigate to the "/Login" path
-      router.push('/Login');
     },
+
   },
 };
   </script>
