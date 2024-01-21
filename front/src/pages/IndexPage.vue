@@ -6,8 +6,7 @@
     </div>
 
     <div v-else-if="selectedContent === 'degreePlanner'">
-      <h6>Coming Soon!</h6>
-      <p>This is your degree planner!</p>
+      <DegreePlanner />
     </div>
 
     <div v-else-if="selectedContent === 'addCourses'" >
@@ -33,12 +32,15 @@ import CalendarComponent from '../components/CalendarComponent.vue'
 import CalendarComponentFriend from '../components/CalendarComponentFriend.vue'
 import FriendsDropdown from '../components/FriendsDropdown.vue'
 import AddCourses from '../components/AddCourses.vue'
+import DegreePlanner from '../components/DegreePlanner.vue'
+
 
 export default defineComponent({
   components: {
     CalendarComponent,
     FriendsDropdown,
     AddCourses,
+    DegreePlanner,
     CalendarComponentFriend
   },
   props: {
