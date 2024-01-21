@@ -55,7 +55,7 @@ export default {
   },
   setup() {
     const rightDrawerOpen = ref(false);
-    const selectedContent = ref("");
+    const selectedContent = ref("mySchedule");
 
     const toggleRightDrawer = () => {
       rightDrawerOpen.value = !rightDrawerOpen.value;

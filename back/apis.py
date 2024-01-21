@@ -1,5 +1,5 @@
 import json
-
+from datetime import datetime, timedelta
 from flask import Flask, request, jsonify
 import connect
 import register
@@ -71,74 +71,150 @@ def friends():
     # Convert the dictionary to a JSON-formatted string
     return jsonify(dictionary)
 
-@app.route('/registeredcourses', methods=['POST'])
+# @app.route('/api/registeredcourses', methods=['POST'])
+# def registeredcourses():
+#     data = request.get_json() #json body
+
+#     if 'username' not in data:
+#         return jsonify({'error': 'Missing username field'}), 400
+
+#     username = data['username']
+
+#     enrolled_titles = connect.query("SHOW COLUMNS FROM Enrolled")
+#     section_titles = connect.query("SHOW COLUMNS FROM Sections")
+
+#     count = connect.query(f"SELECT COUNT(*) FROM Students WHERE username = '{username}'")[0][0]
+#     if count == 0:
+#         return jsonify({'error': 'Username does not exist'}), 400
+
+#     record_count = connect.query(f"SELECT COUNT(*) FROM Enrolled WHERE username = '{username}'")[0][0]
+
+#     dictionary = {}
+#     dictionary['count'] = record_count
+
+#     results = connect.query(f"SELECT * FROM Enrolled WHERE username = '{username}' AND Term = '2023W2'")
+#     sql_query = f"""
+#     SELECT
+#     Sections.term,
+#     Sections.section,
+#     Sections.courseNum,
+#     Sections.courseDept,
+#     Sections.daysOfWeek,
+#     Sections.startTime,
+#     Sections.endTime
+# FROM
+#     Sections
+# INNER JOIN
+#     Enrolled ON Sections.term = Enrolled.term
+#               AND Sections.section = Enrolled.section
+#               AND Sections.courseNum = Enrolled.courseNum
+#               AND Sections.courseDept = Enrolled.courseDept
+#     WHERE Enrolled.username = '{username}' AND Sections.term = '2023W2';
+#     """
+
+#     results = connect.query(sql_query)
+
+#     keys = []
+#     for j in range(1, len(enrolled_titles)):
+#          title = enrolled_titles[j]
+#          keys.append(title[0])
+#     for j in range(len(section_titles)):
+#         title = section_titles[j]
+#         if (not keys.__contains__(title[0])):
+#             keys.append(title[0])
+
+#     all_enrollments = []
+
+#     for i in range(0, record_count):
+#         values = []
+#         if results:
+#             current = results[i]
+#             for j in range(1, len(current)):
+#                 values.append(current[j])
+
+#         data_dict = dict(zip(keys, values))
+#         all_enrollments.append(data_dict)
+
+#     dictionary['results'] = all_enrollments
+
+#     # Convert the dictionary to a JSON-formatted string
+#     return jsonify(dictionary)
+def repeat_events(start_date, days_of_week, max_repeats):
+    repeats = 0
+    current_date = start_date
+
+    while repeats < max_repeats:
+        # Check if the current day of the week matches any specified days
+        if current_date.strftime('%a') in days_of_week.split():
+            # Yield the date without the time portion
+            yield current_date.strftime('%Y-%m-%d')
+
+            repeats += 1
+
+        # Move to the next day
+        current_date += timedelta(days=1)
+
+@app.route('/api/registeredcourses', methods=['POST'])
 def registeredcourses():
-    data = request.get_json() #json body
+    data = request.get_json()
 
     if 'username' not in data:
         return jsonify({'error': 'Missing username field'}), 400
 
     username = data['username']
+    term = '2023W2'  # Adjust the term as needed
 
-    enrolled_titles = connect.query("SHOW COLUMNS FROM Enrolled")
-    section_titles = connect.query("SHOW COLUMNS FROM Sections")
-
-    count = connect.query(f"SELECT COUNT(*) FROM Students WHERE username = '{username}'")[0][0]
-    if count == 0:
-        return jsonify({'error': 'Username does not exist'}), 400
-
-    record_count = connect.query(f"SELECT COUNT(*) FROM Enrolled WHERE username = '{username}'")[0][0]
-
-    dictionary = {}
-    dictionary['count'] = record_count
-
-    results = connect.query(f"SELECT * FROM Enrolled WHERE username = '{username}' AND Term = '2023W2'")
+    # Query to fetch enrolled courses for a specific term
     sql_query = f"""
     SELECT
-    Sections.term,
-    Sections.section,
-    Sections.courseNum,
-    Sections.courseDept,
-    Sections.daysOfWeek,
-    Sections.startTime,
-    Sections.endTime
-FROM
-    Sections
-INNER JOIN
-    Enrolled ON Sections.term = Enrolled.term
-              AND Sections.section = Enrolled.section
-              AND Sections.courseNum = Enrolled.courseNum
-              AND Sections.courseDept = Enrolled.courseDept
-    WHERE Enrolled.username = '{username}' AND Sections.term = '2023W2';
+        Sections.term,
+        Sections.section,
+        Sections.courseNum,
+        Sections.courseDept,
+        Sections.daysOfWeek,
+        Sections.startTime,
+        Sections.endTime
+    FROM
+        Sections
+    INNER JOIN
+        Enrolled ON Sections.term = Enrolled.term
+                  AND Sections.section = Enrolled.section
+                  AND Sections.courseNum = Enrolled.courseNum
+                  AND Sections.courseDept = Enrolled.courseDept
+    WHERE
+        Enrolled.username = '{username}' AND Sections.term = '{term}';
     """
 
     results = connect.query(sql_query)
 
-    keys = []
-    for j in range(1, len(enrolled_titles)):
-         title = enrolled_titles[j]
-         keys.append(title[0])
-    for j in range(len(section_titles)):
-        title = section_titles[j]
-        if (not keys.__contains__(title[0])):
-            keys.append(title[0])
+    if not results:
+        return jsonify({'error': 'No courses found for the given username and term'}), 404
 
-    all_enrollments = []
+    # Define the keys for the JSON response
+    keys = ['term', 'section', 'courseNum', 'courseDept', 'daysOfWeek', 'startTime', 'endTime']
 
-    for i in range(0, record_count):
-        values = []
-        if results:
-            current = results[i]
-            for j in range(1, len(current)):
-                values.append(current[j])
+    # Create a list of dictionaries for each course
+    all_enrollments = [dict(zip(keys, course)) for course in results]
 
-        data_dict = dict(zip(keys, values))
-        all_enrollments.append(data_dict)
+    # Combine courseDept and courseNum into courseName
+    for course in all_enrollments:
+        course['courseName'] = f"{course['courseDept']} {course['courseNum']}"
+        del course['courseDept']
+        del course['courseNum']
 
-    dictionary['results'] = all_enrollments
+        # Generate repeated events based on days of the week
+        start_date = datetime.strptime('2024-01-15', '%Y-%m-%d')
+        days_of_week = course['daysOfWeek']
+        max_repeats = 10
+        course['events'] = list(repeat_events(start_date, days_of_week, max_repeats))
 
-    # Convert the dictionary to a JSON-formatted string
-    return jsonify(dictionary)
+    # Create the final response dictionary
+    response_dict = {
+        'count': len(all_enrollments),
+        'results': all_enrollments
+    }
+
+    return jsonify(response_dict)
 
 @app.route('/login', methods=['POST'])
 def login():

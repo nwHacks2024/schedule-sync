@@ -20,33 +20,36 @@ export default defineComponent({
   data: () => ({
     events: [],
   }),
-  // mounted() {
-  //   this.fetchSections();
-  // },
-  // methods: {
-  //   async fetchSections() {
-  //     try {
-  //       // const response = await axios.post("/registeredcourses");
-  //       const sections = response.data;
+  mounted() {
+    this.fetchSections();
+  },
+  methods: {
+    async fetchSections() {
+      try {
+        const response = await axios.post('/api/registeredcourses', {
+          username: 'dfroberg',
+        });
+        const sections = response.data.results;
+        console.log(sections)
 
-  //       // Process sections and convert them to events
-  //       const newEvents = sections.map((section) => {
-  //         return {
-  //           start: section.startDate, // Replace with the actual start date property from your API
-  //           end: section.endDate, // Replace with the actual end date property from your API
-  //           title: section.title, // Replace with the actual title property from your API
-  //           content: section.content, // Replace with the actual content property from your API
-  //           class: section.eventClass, // Replace with the actual class property from your API
-  //           // Add other properties as needed
-  //         };
-  //       });
+        // Process API response and convert it into events format
+        this.events = sections.flatMap(section => {
+          // Assuming each section has an 'events' key with a list of event dates
+          const eventDates = section.events || [];
 
-  //       // Update the events array with the new events
-  //       this.events = newEvents;
-  //     } catch (error) {
-  //       console.error("Error fetching sections:", error);
-  //     }
-  //   },
-  // },
+          return eventDates.map(date => ({
+            start: `${date} ${section.startTime}`,
+            end: `${date} 16:00`, // You need to define endTime in your API response
+            title: section.courseName,
+          }));
+        });
+
+        console.log('finished processing')
+        console.log(this.events)
+      } catch (error) {
+        console.error("Error fetching sections:", error);
+      }
+    },
+  },
 });
 </script>
