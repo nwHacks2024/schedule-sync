@@ -10,7 +10,7 @@
       <p>This is your degree planner!</p>
     </div>
 
-    <div v-else-if="selectedContent === 'addCourses'">
+    <div v-else-if="selectedContent === 'addCourses'" >
       <AddCourses />
     </div>
 
