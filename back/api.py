@@ -6,7 +6,7 @@ import connect
 app = Flask(__name__)
 
 
-@app.route('/api/userinfo', methods=['GET'])
+@app.route('/api/userprofile', methods=['GET'])
 def userinfo():
     titles = connect.query("SHOW COLUMNS FROM Students")
     data = request.get_json()
