@@ -20,11 +20,11 @@ def has_prof(url):
 # helper function for scrape_ubc_courses to get prof of section
 def get_prof_name(url):
     tables = get_tables(url)
-    prof_name = tables[2].find_all("a")[0].text.strip().split(" ")
+    prof_name = tables[2].find_all("a")[0].text.strip().split(", ")
     # prof_text = tables[2].text.strip()
     # prof_text_split = re.sub("^Instructor:\s*", "", prof_text).split(" ")
     first_name = prof_name[1]
-    last_name = prof_name[0].replace(",", "")
+    last_name = prof_name[0]
     return first_name + " " + last_name
     # with open(dept_name + course_name + ".txt", 'w') as text_file:
     #     text_file.write(response.text)
@@ -80,9 +80,9 @@ def scrape_ubc_courses(json_course_path):
                             "days": days, "time": time}
             section_list.append(section_data)
 
-    with open("data/ubc_courses_data/" + dept_name + "_section_list.json", "w", encoding="latin-1") as json_file:
+    with open("data/ubc_courses_data/all_section_list.json", "w", encoding="latin-1") as json_file:
         json.dump(section_list, json_file, indent=2)
-    with open("data/ubc_courses_data/" + dept_name + "_teaching_list.json", "w", encoding="latin-1") as json_file:
+    with open("data/ubc_courses_data/all_teaching_list.json", "w", encoding="latin-1") as json_file:
         json.dump(prof_list, json_file, indent=2)
 
 
