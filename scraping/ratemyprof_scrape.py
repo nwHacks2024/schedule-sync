@@ -27,6 +27,7 @@ def find_prof_info(json_section_path):
         prof_json_pattern = re.compile("^V.*$")
         avg_rating = "NA"
         avg_difficulty = "NA"
+        num_ratings = 0
         for key, value in json_data.items():
             if prof_json_pattern.match(key):
                 school_id = value["school"]["__ref"]
@@ -34,16 +35,17 @@ def find_prof_info(json_section_path):
                 prof_last = value["lastName"]
                 school_name = json_data[school_id]["name"]
                 if school_name == "University of British Columbia" or prof_first.lower() == name_list[0] or prof_last.lower() == name_list[1]:
-                    prof_id = value["legacyID"]
+                    prof_id = value["legacyId"]
                     prof_url = "https://www.ratemyprofessors.com/professor/" + str(prof_id)
                     prof_page = requests.get(prof_url)
                     soup = BeautifulSoup(prof_page.text, "html.parser")
                     num_ratings_raw = soup.find_all("div", {"class", "RatingValue__NumRatings-qw8sqy-0 jMkisx"})
                     num_ratings_clean = num_ratings_raw[0].find_all("a")[0].text
                     num_ratings = re.search("[0-9]*", num_ratings_clean).group()
-                    div = soup.find_all("div", {"class", "FeedbackItem__FeedbackNumber-uof32n-1 kkESWs"})
-                    avg_difficulty = div[1].text
-
+                    difficulty = soup.find_all("div", {"class", "FeedbackItem__FeedbackNumber-uof32n-1 kkESWs"})
+                    avg_difficulty = difficulty[1].text
+                    rating = soup.find_all("div", {"class": "RatingValue__Numerator-qw8sqy-2 liyUjw"})
+                    avg_rating = rating[0].text
 
                 # num_ratings = value["numRatings"]
                 # avg_rating = "NA"
@@ -61,8 +63,7 @@ def find_prof_info(json_section_path):
             "avgDifficulty": avg_difficulty
         }
         prof_list.append(prof_data)
-    print(type(prof_list))
-    print(type(prof_list[0]))
+
     with open("data/rate_my_prof_data/CPSC_prof_list.json", "w", encoding="latin-1") as json_file:
         json.dump(prof_list, json_file, indent=2)
 
