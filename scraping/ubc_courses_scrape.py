@@ -71,7 +71,7 @@ def scrape_ubc_courses(json_course_path):
                 prof_name = get_prof_name(section_url)
                 teaching_data = {"dept": dept, "course_num": course_num,
                                  "section_num": section_num, "year": year,
-                                 "name": prof_name}
+                                 "name": prof_name, "term": term}
                 prof_list.append(teaching_data)
 
             section_data = {"dept": dept, "course_num": course_num,

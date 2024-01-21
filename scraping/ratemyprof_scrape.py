@@ -17,7 +17,7 @@ def find_prof_info(json_section_path):
             continue
         else:
             searched_profs.append(prof_name)
-        name_list = prof_name.lower().split()
+        name_list = prof_name.lower().partition(" ")
         prof_search_query = prof_url_base + name_list[0] + "%20" + name_list[1]
         page = requests.get(prof_search_query)
 
@@ -71,4 +71,4 @@ def find_prof_info(json_section_path):
         json.dump(prof_list, json_file, indent=2)
 
 
-find_prof_info("data/ubc_courses_data/CPSC_teaching_list.json")
+find_prof_info("data/ubc_courses_data/all_teaching_list.json")
