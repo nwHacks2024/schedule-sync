@@ -8,7 +8,12 @@
           label="Course Department"
           class="wider-dropdown q-mr-md"
         ></q-select>
-        <q-btn @click="loadCourseNumbers" label="Load Course Numbers" color="primary" class="q-ml-md" />
+        <q-btn
+          @click="loadCourseNumbers"
+          label="Load Course Numbers"
+          color="primary"
+          class="q-ml-md, q-mr-md"
+        />
 
         <q-select
           v-if="showSecondDropdown"
@@ -18,12 +23,22 @@
           class="wider-dropdown"
         ></q-select>
 
-        <q-btn @click="searchSections" label="Search Sections" color="primary" class="q-ml-md" />
+        <q-btn
+          @click="searchSections"
+          label="Search Sections"
+          color="primary"
+          class="q-ml-md, q-mr-md"
+        />
       </div>
     </q-card-section>
 
     <!-- Loading Spinner -->
-    <q-spinner v-if="loading" size="50px" color="primary" class="q-mt-md" />
+    <q-spinner
+      v-if="loading"
+      size="50px"
+      color="primary"
+      class="q-mt-md, q-mr-md"
+    />
 
     <!-- Card Carousel -->
     <q-carousel
@@ -75,14 +90,22 @@ export default {
       this.loading = true; // Start loading spinner
       try {
         // Fetch course numbers based on the selected department
-        console.log(this.selectedOption1.value)
         const response = await axios.post("/api/courses", {
           department: this.selectedOption1.value,
-
         });
         console.log("Response:", response.data);
 
-        this.dropdownOptions2 = response.data.courseNumbers;
+        // Use a Set to store unique course numbers
+        const uniqueCourseNumbers = new Set();
+
+        // Iterate through the response data and add course numbers to the Set
+        response.data.results.forEach(course => {
+          uniqueCourseNumbers.add(course.courseNum);
+        });
+
+        // Convert the Set to an array and assign it to dropdownOptions2
+        this.dropdownOptions2 = Array.from(uniqueCourseNumbers);
+
         this.showSecondDropdown = true; // Show the second dropdown after loading options
       } catch (error) {
         console.error("Error fetching course numbers:", error);
@@ -115,9 +138,12 @@ export default {
 };
 </script>
 
+
+
+
 <style scoped>
 .my-card {
-  max-width: 600px; /* Adjust the max-width as needed */
+  max-width: 800px; /* Adjust the max-width as needed */
   margin: auto;
   margin-top: 20px;
   padding: 20px;
