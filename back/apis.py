@@ -358,6 +358,11 @@ INNER JOIN
               AND Teaches.section = Sections.section
               AND Teaches.courseNum = Sections.courseNum
               AND Teaches.courseDept = Sections.courseDept
+WHERE
+    Sections.courseNum = '{courseNum}'
+    AND Sections.courseDept = '{courseDept}'
+    AND Sections.section = '{sectionNum}'
+    AND Sections.term = '{term}';
 """
 
     results = connect.query(sql_query)
