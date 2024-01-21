@@ -18,7 +18,6 @@
         <q-tab name="degreePlanner" label="Degree Planner" />
         <q-tab name="addCourses" label="Add Courses" />
         <q-tab name="compareSchedules" label="Compare Schedules" />
-        <FriendsDropdown />
       </q-tabs>
     </q-header>
 
@@ -46,12 +45,10 @@
 <script>
 import { ref } from "vue";
 import MenuComponent from "../components/MenuComponent.vue";
-import FriendsDropdown from "../components/FriendsDropdown.vue";
 
 export default {
   components: {
-    MenuComponent,
-    FriendsDropdown,
+    MenuComponent
   },
   setup() {
     const rightDrawerOpen = ref(false);

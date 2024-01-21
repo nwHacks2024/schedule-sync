@@ -14,7 +14,9 @@
     </div>
 
     <div v-else-if="selectedContent === 'compareSchedules'">
+      <FriendsDropdown />
       <CalendarComponentFriend />
+
     </div>
 
     <div v-else>
@@ -28,10 +30,12 @@ import { defineComponent } from 'vue'
 // import ApiTest from '../components/ApiTest.vue'
 import CalendarComponent from '../components/CalendarComponent.vue'
 import CalendarComponentFriend from '../components/CalendarComponentFriend.vue'
+import FriendsDropdown from '../components/FriendsDropdown.vue'
 
 export default defineComponent({
   components: {
     CalendarComponent,
+    FriendsDropdown,
     CalendarComponentFriend
   },
   props: {

@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md">
-    <q-btn-dropdown color="primary" label="Compare Schedules" no-shadow>
+    <q-btn-dropdown color="primary" label="Choose Friend" no-shadow>
       <q-list v-if="!loading">
         <q-item v-for="friend in friends.results" :key="friend.id" clickable v-close-popup @click="onItemClick(friend)">
           <q-item-section>
