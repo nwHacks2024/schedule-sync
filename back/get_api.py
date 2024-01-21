@@ -27,8 +27,7 @@ def userinfo():
     data_dict = dict(zip(keys, values))
 
     # Convert the dictionary to a JSON-formatted string
-    json_data = json.dumps(data_dict)
-    return json_data
+    return jsonify(data_dict)
 
 @app.route('/friends', methods=['GET'])
 def friends():
@@ -44,16 +43,18 @@ def friends():
     dictionary = {}
     dictionary['count'] = record_count
 
-    all_friends = []
-    for i in range(record_count):
-        keys = []
-        for title in friend_titles:
-            keys.append(title[0])
+    keys = []
+    print(friend_titles)
+    for j in range(1, len(friend_titles)):
+        title = friend_titles[j]
+        keys.append(title[0])
 
+    all_friends = []
+
+    for i in range(0, record_count):
         values = []
         if results:
-            for entry in results[0]:
-                values.append(entry)
+            values.append(results[i][1])
 
         data_dict = dict(zip(keys, values))
         all_friends.append(data_dict)
@@ -61,8 +62,7 @@ def friends():
     dictionary['results'] = all_friends
 
     # Convert the dictionary to a JSON-formatted string
-    json_data = json.dumps(dictionary)
-    return json_data
+    return jsonify(dictionary)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
