@@ -1,0 +1,23 @@
+{
+    "count": 2,
+    "results": [
+        {
+            "courseDept": "CPSC",
+            "courseNum": 110,
+            "daysOfWeek": "Mon Wed Fri",
+            "endTime": "16:00",
+            "section": "201",
+            "startTime": "15:00",
+            "term": "2023W2"
+        },
+        {
+            "courseDept": "CPSC",
+            "courseNum": 110,
+            "daysOfWeek": "Mon Wed Fri",
+            "endTime": "15:00",
+            "section": "202",
+            "startTime": "14:00",
+            "term": "2023W2"
+        }
+    ]
+}

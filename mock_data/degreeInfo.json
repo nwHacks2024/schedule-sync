@@ -1,0 +1,13 @@
+{
+    "count": 2,
+    "results": [
+        {
+            "courseDept": "CPSC",
+            "courseNum": 110
+        },
+        {
+            "courseDept": "CPSC",
+            "courseNum": 210
+        }
+    ]
+}
