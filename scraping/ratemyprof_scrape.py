@@ -21,13 +21,12 @@ def find_prof_info(json_section_path):
         prof_search_query = prof_url_base + name_list[0] + "%20" + name_list[1]
         page = requests.get(prof_search_query)
 
-        print(prof_name)
         json_data = json.loads(re.search(r'window.__RELAY_STORE__ = ({.*})', page.text).group(1))
 
         prof_json_pattern = re.compile("^V.*$")
         avg_rating = "NA"
         avg_difficulty = "NA"
-        num_ratings = 0
+        num_ratings = "0"
         for key, value in json_data.items():
             if prof_json_pattern.match(key):
                 school_id = value["school"]["__ref"]
@@ -42,10 +41,14 @@ def find_prof_info(json_section_path):
                     num_ratings_raw = soup.find_all("div", {"class", "RatingValue__NumRatings-qw8sqy-0 jMkisx"})
                     num_ratings_clean = num_ratings_raw[0].find_all("a")[0].text
                     num_ratings = re.search("[0-9]*", num_ratings_clean).group()
-                    difficulty = soup.find_all("div", {"class", "FeedbackItem__FeedbackNumber-uof32n-1 kkESWs"})
-                    avg_difficulty = difficulty[1].text
-                    rating = soup.find_all("div", {"class": "RatingValue__Numerator-qw8sqy-2 liyUjw"})
-                    avg_rating = rating[0].text
+                    if num_ratings != "":
+                        difficulty = soup.find_all("div", {"class", "FeedbackItem__FeedbackNumber-uof32n-1 kkESWs"})
+                        avg_difficulty = difficulty[1].text
+                        rating = soup.find_all("div", {"class": "RatingValue__Numerator-qw8sqy-2 liyUjw"})
+                        avg_rating = rating[0].text
+                    else:
+                        num_ratings = "0"
+                    break
 
                 # num_ratings = value["numRatings"]
                 # avg_rating = "NA"
@@ -64,7 +67,7 @@ def find_prof_info(json_section_path):
         }
         prof_list.append(prof_data)
 
-    with open("data/rate_my_prof_data/CPSC_prof_list.json", "w", encoding="latin-1") as json_file:
+    with open("data/rate_my_prof_data/all_prof_list.json", "w", encoding="latin-1") as json_file:
         json.dump(prof_list, json_file, indent=2)
 
 

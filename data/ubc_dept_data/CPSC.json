@@ -342,5 +342,29 @@
   {
     "courseNum": "649",
     "dept": "CPSC"
+  },
+  {
+    "courseNum": "100",
+    "dept": "MATH"
+  },
+  {
+    "courseNum": "101",
+    "dept": "MATH"
+  },
+  {
+    "courseNum": "200",
+    "dept": "MATH"
+  },
+  {
+    "courseNum": "221",
+    "dept": "MATH"
+  },
+  {
+    "courseNum": "251",
+    "dept": "STAT"
+  },
+  {
+    "courseNum": "649",
+    "dept": "CPSC"
   }
 ]
