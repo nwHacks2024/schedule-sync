@@ -1,6 +1,6 @@
 # ScheduleSync
 
-Welcome to ScheduleSync, your ultimate scheduling companion for UBC students! This application is designed to streamline the course scheduling process by allowing users to create accounts, manage their courses, add friends, and view their friends' schedules. Built with Vue.js and Quasar for the frontend and Python 3 with Flask for the backend, ScheduleSync ensures a smooth and efficient user experience.
+Welcome to ScheduleSync, the ultimate scheduling companion for UBC students! This application is designed to streamline the course scheduling process by allowing users to create accounts, manage their courses, add friends, and view their friends' schedules.
 
 #### Created with love by [Daven Froberg](http://www.github.com/dfroberg), [Carlos Perez](https://github.com/carlosperez67), [Erica Buchanan](https://github.com/ericabuchanan), and [Brett Caswell](https://github.com/caswellbrett) ####
 ## Technology Stack
