@@ -34,8 +34,8 @@ $ source venv/bin/activate
 ```bash
 # Install frontend dependencies
 $ cd front
-$ npm i -g @quasar/cli
-$ npm install
+$ sudo npm i -g @quasar/cli
+$ sudo npm install
 
 # Install backend dependencies
 $ cd back

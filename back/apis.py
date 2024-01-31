@@ -483,9 +483,10 @@ def register():
         return jsonify({'error': 'Missing username field'}), 400
     elif 'password' not in data:
         return jsonify({'error': 'Missing password field'}), 400
-    elif 'firstName' in data:
+
+    if 'firstName' in data:
         first_name = data['firstName']
-    elif 'lastName' in data:
+    if 'lastName' in data:
         last_name = data['lastName']
 
     try:
