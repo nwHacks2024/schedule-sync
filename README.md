@@ -6,13 +6,14 @@ Welcome to ScheduleSync, the ultimate scheduling companion for UBC students! Thi
 ## Technology Stack
 
 - **Frontend:**
-  - Vue.js v3.4.15
-  - Quasar v2.14.2
+  - Vue.js 3.4.15
+  - Quasar 2.14.2
 
 - **Backend:**
   - Python 3
-  - Flask v3.0.1
+  - Flask 3.0.1
   - MySQL
+  - BeautifulSoup 4.12.3
 
 ## Getting Started
 
