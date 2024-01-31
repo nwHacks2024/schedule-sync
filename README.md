@@ -20,30 +20,44 @@ To run ScheduleSync locally, follow these steps:
 
 1. Clone the repository:
 ```bash
-   $ git clone https://github.com/davenfroberg/schedule-sync.git
+$ git clone https://github.com/davenfroberg/schedule-sync.git
+```
+2. Create a virtual environment in root project directory and activate it:
+```bash
+$ python3 -m venv venv
+$ source venv/bin/activate
 ```
 
-2. Install dependencies:
-   - TBD
-     
-3. Configure the database
+3. Install dependencies and initialize the application:
+
+```bash
+# Install frontend dependencies
+$ cd front
+$ npm i -g @quasar/cli
+$ npm install
+
+# Install backend dependencies
+$ cd back
+$ pip install -r requirements.txt
+```
+4. Configure the database
    - Set up a MySQL database and put the credentials in a new file `config.py`:
 ```
-  host = <host name>
-  port = <host port>
-  user = <db username>
-  password = <db password>
-  database = <db name>
+  host = <host_name>
+  port = <host_port>
+  user = <db_username>
+  password = <db_password>
+  database = <db_name>
 ```
 
-4. Run the application:
+5. Run the application:
 ```bash
 # Start frontend
-$ cd ../front
+$ cd front
 $ quasar dev
 
 # Start backend
-$ cd ../back
+$ cd back
 $ python apis.py
 ```
 

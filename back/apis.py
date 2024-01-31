@@ -1,4 +1,9 @@
-import json
+"""
+This file contains the API endpoints for the application. The endpoints are used to interact with the database and perform
+various operations such as user registration, login, course enrollment, and friend management. The endpoints are used to
+fetch and update data in the database and return the results in JSON format.
+"""
+
 from datetime import datetime, timedelta
 from flask import Flask, request, jsonify
 import connect
@@ -71,74 +76,6 @@ def friends():
     # Convert the dictionary to a JSON-formatted string
     return jsonify(dictionary)
 
-# @app.route('/api/registeredcourses', methods=['POST'])
-# def registeredcourses():
-#     data = request.get_json() #json body
-
-#     if 'username' not in data:
-#         return jsonify({'error': 'Missing username field'}), 400
-
-#     username = data['username']
-
-#     enrolled_titles = connect.query("SHOW COLUMNS FROM Enrolled")
-#     section_titles = connect.query("SHOW COLUMNS FROM Sections")
-
-#     count = connect.query(f"SELECT COUNT(*) FROM Students WHERE username = '{username}'")[0][0]
-#     if count == 0:
-#         return jsonify({'error': 'Username does not exist'}), 400
-
-#     record_count = connect.query(f"SELECT COUNT(*) FROM Enrolled WHERE username = '{username}'")[0][0]
-
-#     dictionary = {}
-#     dictionary['count'] = record_count
-
-#     results = connect.query(f"SELECT * FROM Enrolled WHERE username = '{username}' AND Term = '2023W2'")
-#     sql_query = f"""
-#     SELECT
-#     Sections.term,
-#     Sections.section,
-#     Sections.courseNum,
-#     Sections.courseDept,
-#     Sections.daysOfWeek,
-#     Sections.startTime,
-#     Sections.endTime
-# FROM
-#     Sections
-# INNER JOIN
-#     Enrolled ON Sections.term = Enrolled.term
-#               AND Sections.section = Enrolled.section
-#               AND Sections.courseNum = Enrolled.courseNum
-#               AND Sections.courseDept = Enrolled.courseDept
-#     WHERE Enrolled.username = '{username}' AND Sections.term = '2023W2';
-#     """
-
-#     results = connect.query(sql_query)
-
-#     keys = []
-#     for j in range(1, len(enrolled_titles)):
-#          title = enrolled_titles[j]
-#          keys.append(title[0])
-#     for j in range(len(section_titles)):
-#         title = section_titles[j]
-#         if (not keys.__contains__(title[0])):
-#             keys.append(title[0])
-
-#     all_enrollments = []
-
-#     for i in range(0, record_count):
-#         values = []
-#         if results:
-#             current = results[i]
-#             for j in range(1, len(current)):
-#                 values.append(current[j])
-
-#         data_dict = dict(zip(keys, values))
-#         all_enrollments.append(data_dict)
-
-#     dictionary['results'] = all_enrollments
-
-#     # Convert the dictionary to a JSON-formatted string
-#     return jsonify(dictionary)
 def repeat_events(start_date, days_of_week, max_repeats):
     repeats = 0
     current_date = start_date
@@ -521,7 +458,6 @@ def addcourse():
         return jsonify({'error': 'Missing courseNum field'}), 400
     elif 'courseDept' not in data:
         return jsonify({'error': 'Missing courseDept field'}), 400
-
 
     section = data['section']
     term = "2023W2"
