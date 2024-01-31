@@ -20,7 +20,7 @@ To run ScheduleSync locally, follow these steps:
 
 1. Clone the repository:
 ```bash
-   $ git clone https://github.com/your-username/ScheduleSync.git 
+   $ git clone https://github.com/davenfroberg/schedule-sync.git
 ```
 
 2. Install dependencies:
