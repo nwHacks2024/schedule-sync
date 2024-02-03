@@ -171,15 +171,16 @@ def registeredcourses():
     return jsonify(response_dict)
 
 
-@app.route('/api/login', methods=['GET'])
+@app.route('/api/login', methods=['POST'])
 def login():
-    username = request.args.get('username')
-    password = request.args.get('password')
-
-    if username is None:
+    data = request.get_json() #json body
+    if 'username' not in data:
         return jsonify({'error': 'Missing username field'}), 400
-    if password is None:
+    elif 'password' not in data:
         return jsonify({'error': 'Missing password field'}), 400
+
+    username = data['username']
+    password = data['password']
 
     count = connect.query(f"SELECT COUNT(*) FROM Students WHERE username = '{username}'")[0][0]
     if count == 0:

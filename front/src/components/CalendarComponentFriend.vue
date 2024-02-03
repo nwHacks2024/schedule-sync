@@ -30,9 +30,8 @@ export default defineComponent({
   methods: {
     async fetchSections() {
       try {
-        const response = await axios.post("/api/registeredcourses", {
-          username: "dfroberg",
-        });
+        const username = "dfroberg";
+        const response = await axios.get(`/api/registeredcourses?username=${username}`);
         const sections = response.data.results;
         console.log(sections);
 
@@ -57,9 +56,8 @@ export default defineComponent({
     },
     async fetchSectionsFriend() {
       try {
-        const response = await axios.post("/api/registeredcourses", {
-          username: "ebuchanan",
-        });
+        const username = "ebuchanan";
+        const response = await axios.get(`/api/registeredcourses?username=${username}`);
         const sections = response.data.results;
         console.log(sections);
 

@@ -102,9 +102,7 @@ export default {
       this.loading = true; // Start loading spinner
       try {
         // Fetch course numbers based on the selected department
-        const response = await axios.post("/api/courses", {
-          department: this.selectedOption1.value,
-        });
+        const response = await axios.get(`/api/courses?department=${this.selectedOption1.value}`);
 
         // Use a Set to store unique course numbers
         const uniqueCourseNumbers = new Set();
@@ -133,10 +131,7 @@ export default {
       this.loading = true; // Start loading spinner
       try {
         // Call the API endpoint /api/sections with courseNum and courseDept parameters
-        const response = await axios.post("/api/sections", {
-          courseNum: this.selectedOption2,
-          courseDept: this.selectedOption1.value,
-        });
+        const response = await axios.get(`/api/sections?courseNum=${this.selectedOption2}&courseDept=${this.selectedOption1.value}`);
         console.log(response);
 
         // Update the 'courses' array with the response data

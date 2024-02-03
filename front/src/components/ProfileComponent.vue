@@ -35,10 +35,9 @@ export default {
   methods: {
     async fetchUserProfile() {
       try {
+        username = "dfroberg";
         // Assuming the /api/userprofile endpoint returns the user profile data
-        const response = await axios.post('/api/userprofile', {
-          username: 'dfroberg',
-        });
+        const response = await axios.get(`/api/userprofile?username=${username}`);
         const userData = response.data;
 
         // Update the userProfile data with the data from the API
