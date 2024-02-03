@@ -12,14 +12,15 @@ import register as reg
 app = Flask(__name__)
 
 
-@app.route('/api/userprofile', methods=['POST'])
+@app.route('/api/userprofile', methods=['GET'])
 def userinfo():
     titles = connect.query("SHOW COLUMNS FROM Students")
-    data = request.get_json()
-    if 'username' not in data:
+
+    username = request.args.get('username')
+
+    if username is None:
         return jsonify({'error': 'Missing username field'}), 400
 
-    username = data['username']
     count = connect.query(f"SELECT COUNT(*) FROM Students WHERE username = '{username}'")[0][0]
     if count == 0:
         return jsonify({'error': 'Username does not exist'}), 400
@@ -39,14 +40,16 @@ def userinfo():
     # Convert the dictionary to a JSON-formatted string
     return jsonify(data_dict)
 
-@app.route('/api/friends', methods=['POST'])
+
+@app.route('/api/friends', methods=['GET'])
 def friends():
     friend_titles = connect.query("SHOW COLUMNS FROM Friends")
-    data = request.get_json() #json body
-    if 'username' not in data:
+
+    username = request.args.get('username')
+
+    if username is None:
         return jsonify({'error': 'Missing username field'}), 400
 
-    username = data['username']
     count = connect.query(f"SELECT COUNT(*) FROM Students WHERE username = '{username}'")[0][0]
     if count == 0:
         return jsonify({'error': 'Username does not exist'}), 400
@@ -76,6 +79,7 @@ def friends():
     # Convert the dictionary to a JSON-formatted string
     return jsonify(dictionary)
 
+
 def repeat_events(start_date, days_of_week, max_repeats):
     repeats = 0
     current_date = start_date
@@ -100,14 +104,14 @@ def repeat_events(start_date, days_of_week, max_repeats):
         elif 'Fri' in days_of_week:
             current_date += timedelta(days=1)
 
-@app.route('/api/registeredcourses', methods=['POST'])
-def registeredcourses():
-    data = request.get_json()
 
-    if 'username' not in data:
+@app.route('/api/registeredcourses', methods=['GET'])
+def registeredcourses():
+    username = request.args.get('username')
+
+    if username is None:
         return jsonify({'error': 'Missing username field'}), 400
 
-    username = data['username']
     term = '2023W2'  # Adjust the term as needed
 
     # Query to fetch enrolled courses for a specific term
@@ -166,44 +170,46 @@ def registeredcourses():
 
     return jsonify(response_dict)
 
-@app.route('/api/login', methods=['POST'])
-def login():
-    data = request.get_json() #json body
-    if 'username' not in data:
-        return jsonify({'error': 'Missing username field'}), 400
-    if 'password' not in data:
-        return jsonify({'error': 'Missing password field'}), 400
 
-    username = data['username']
-    password = data['password']
+@app.route('/api/login', methods=['GET'])
+def login():
+    username = request.args.get('username')
+    password = request.args.get('password')
+
+    if username is None:
+        return jsonify({'error': 'Missing username field'}), 400
+    if password is None:
+        return jsonify({'error': 'Missing password field'}), 400
 
     count = connect.query(f"SELECT COUNT(*) FROM Students WHERE username = '{username}'")[0][0]
     if count == 0:
         return jsonify({'error': 'Username does not exist'}), 400
 
-    if(reg.authenticate_user(username, password)):
+    if reg.authenticate_user(username, password):
         return jsonify({'success': 'Login successful'}), 200
     else:
         return jsonify({'error': 'Invalid credentials'}), 401
 
-@app.route('/api/users', methods=['POST'])
+
+@app.route('/api/users', methods=['GET'])
 def users():
-    data = request.get_json()
-    if 'username' not in data:
+
+    username = request.args.get('username')
+    search_name = request.args.get('searchName')
+
+    if username is None:
         return jsonify({'error': 'Missing username field'}), 400
-    if 'searchName' not in data:
+    if search_name is None:
         return jsonify({'error': 'Missing searchName field'}), 400
 
     titles = connect.query("SHOW COLUMNS FROM Students")
 
-    username = data['username']
-    searchName = data['searchName']
     count = connect.query(f"SELECT COUNT(*) FROM Students WHERE username = '{username}'")[0][0]
     if count == 0:
         return jsonify({'error': 'Username does not exist'}), 400
 
-    record_count = connect.query(f"SELECT COUNT(*) FROM Students WHERE username LIKE '%{searchName}%' AND username != '{username}'")[0][0]
-    results = connect.query(f"SELECT * FROM Students WHERE username LIKE '%{searchName}%' AND username != '{username}'")
+    record_count = connect.query(f"SELECT COUNT(*) FROM Students WHERE username LIKE '%{search_name}%' AND username != '{username}'")[0][0]
+    results = connect.query(f"SELECT * FROM Students WHERE username LIKE '%{search_name}%' AND username != '{username}'")
 
     dictionary = {}
     dictionary['count'] = record_count
@@ -225,13 +231,14 @@ def users():
 
     return jsonify(dictionary), 200
 
-@app.route('/api/degreeinfo', methods=['POST'])
+
+@app.route('/api/degreeinfo', methods=['GET'])
 def degreeinfo():
-    data = request.get_json()
-    if 'username' not in data:
+    username = request.args.get('username')
+
+    if username is None:
         return jsonify({'error': 'Missing username field'}), 400
 
-    username = data['username']
     count = connect.query(f"SELECT COUNT(*) FROM Students WHERE username = '{username}'")[0][0]
     if count == 0:
         return jsonify({'error': 'Username does not exist'}), 400
@@ -239,7 +246,8 @@ def degreeinfo():
     results = connect.query(f"SELECT * FROM Students WHERE username = '{username}'")
     degree_name = results[0][4]
     faculty_name = results[0][3]
-    if degree_name == None or faculty_name == None:
+
+    if degree_name is None or faculty_name is None:
         return jsonify({'error': 'No degree declared'}), 400
 
     requirement_results = connect.query(f"SELECT * FROM Requirements WHERE degreeName = '{degree_name}' AND faculty = '{faculty_name}'")
@@ -269,13 +277,14 @@ def degreeinfo():
 
     return jsonify(dictionary), 200
 
-@app.route('/api/courses', methods=['POST'])
+
+@app.route('/api/courses', methods=['GET'])
 def courses():
-    data = request.get_json()
-    if 'department' not in data:
+    department = request.args.get('department')
+
+    if department is None:
         return jsonify({'error': 'Missing department field'}), 400
 
-    department = data['department']
     count = connect.query(f"SELECT COUNT(*) FROM Courses WHERE dept = '{department}'")[0][0]
     if count == 0:
         return jsonify({'error': 'Department does not exist'}), 400
@@ -306,22 +315,23 @@ def courses():
 
     return jsonify(dictionary), 200
 
-@app.route('/api/sections', methods=['POST'])
+
+@app.route('/api/sections', methods=['GET'])
 def sections():
-    data = request.get_json()
-    if 'courseNum' not in data:
+    course_num = request.args.get('courseNum')
+    course_dept = request.args.get('courseDept')
+
+    if course_num is None:
         return jsonify({'error': 'Missing courseNum field'}), 400
-    if 'courseDept' not in data:
+    if course_dept is None:
         return jsonify({'error': 'Missing courseDept field'}), 400
 
-    courseNum = data['courseNum']
-    courseDept = data['courseDept']
-    count = connect.query(f"SELECT COUNT(*) FROM Courses WHERE courseNum = '{courseNum}' AND dept = '{courseDept}'")[0][0]
+    count = connect.query(f"SELECT COUNT(*) FROM Courses WHERE courseNum = '{course_num}' AND dept = '{course_dept}'")[0][0]
     if count == 0:
         return jsonify({'error': 'Course does not exist'}), 400
 
-    record_count = connect.query(f"SELECT COUNT(*) FROM Sections WHERE courseNum = '{courseNum}' AND courseDept = '{courseDept}'")[0][0]
-    results = connect.query(f"SELECT * FROM Sections WHERE courseNum = '{courseNum}' AND courseDept = '{courseDept}'")
+    record_count = connect.query(f"SELECT COUNT(*) FROM Sections WHERE courseNum = '{course_num}' AND courseDept = '{course_dept}'")[0][0]
+    results = connect.query(f"SELECT * FROM Sections WHERE courseNum = '{course_num}' AND courseDept = '{course_dept}'")
 
     titles = connect.query("SHOW COLUMNS FROM Sections")
 
@@ -347,24 +357,23 @@ def sections():
     return jsonify(dictionary), 200
 
 
-@app.route('/api/sectioninfo', methods=['POST'])
+@app.route('/api/sectioninfo', methods=['GET'])
 def sectioninfo():
-    data = request.get_json()
-    if 'courseNum' not in data:
+    course_num = request.args.get('courseNum')
+    course_dept = request.args.get('courseDept')
+    section_num = request.args.get('sectionNum')
+
+    if course_num is None:
         return jsonify({'error': 'Missing courseNum field'}), 400
-    if 'courseDept' not in data:
+    if course_dept is None:
         return jsonify({'error': 'Missing courseDept field'}), 400
-    if 'sectionNum' not in data:
+    if section_num is None:
         return jsonify({'error': 'Missing sectionNum field'}), 400
 
-    courseNum = data['courseNum']
-    courseDept = data['courseDept']
-    sectionNum = data['sectionNum']
     term = "2023W2"
-    count = connect.query(f"SELECT COUNT(*) FROM Courses WHERE courseNum = '{courseNum}' AND dept = '{courseDept}'")[0][0]
+    count = connect.query(f"SELECT COUNT(*) FROM Courses WHERE courseNum = '{course_num}' AND dept = '{course_dept}'")[0][0]
     if count == 0:
         return jsonify({'error': 'Course does not exist'}), 400
-
 
     sql_query = f"""
 SELECT
@@ -385,9 +394,9 @@ RIGHT OUTER JOIN
               AND Teaches.courseNum = Sections.courseNum
               AND Teaches.courseDept = Sections.courseDept
 WHERE
-    Sections.courseNum = '{courseNum}'
-    AND Sections.courseDept = '{courseDept}'
-    AND Sections.section = '{sectionNum}'
+    Sections.courseNum = '{course_num}'
+    AND Sections.courseDept = '{course_dept}'
+    AND Sections.section = '{section_num}'
     AND Sections.term = '{term}';
 """
 
@@ -395,8 +404,6 @@ WHERE
 
     section_titles = connect.query("SHOW COLUMNS FROM Sections")
     prof_titles = connect.query("SHOW COLUMNS FROM Professors")
-
-    data_dict = {}
 
     keys = []
     for i in range(0, len(prof_titles)-3):
@@ -413,39 +420,48 @@ WHERE
 
     return jsonify(data_dict), 200
 
+
 @app.route('/api/removecourse', methods=['DELETE'])
 def removecourse():
-    data = request.get_json() #json body
-    if 'username' not in data:
+    username = request.args.get('username')
+    section = request.args.get('section')
+    course_num = request.args.get('courseNum')
+    course_dept = request.args.get('courseDept')
+
+    if username is None:
         return jsonify({'error': 'Missing username field'}), 400
-    elif 'section' not in data:
+    if section is None:
         return jsonify({'error': 'Missing section field'}), 400
-    elif 'courseNum' not in data:
+    if course_num is None:
         return jsonify({'error': 'Missing courseNum field'}), 400
-    elif 'courseDept' not in data:
+    if course_dept is None:
         return jsonify({'error': 'Missing courseDept field'}), 400
 
     term = "2023W2"
     try:
-        connect.query(f"DELETE FROM Enrolled WHERE username='{data['username']}' AND term='{term}' AND section='{data['section']}' AND courseNum='{data['courseNum']}' AND courseDept='{data['courseDept']}'")
+        connect.query(f"DELETE FROM Enrolled WHERE username='{username}' AND term='{term}' AND section='{section}' AND courseNum='{course_num}' AND courseDept='{course_dept}'")
         return jsonify({'success': 'Course section deleted!'}), 200
     except:
         return jsonify({'error': 'Invalid course deletion'}), 400
 
+
 @app.route('/api/removefriend', methods=['DELETE'])
 def removefriend():
-    data = request.get_json() #json body
-    if 'username' not in data:
+    username = request.args.get('username')
+    friend_username = request.args.get('friendUsername')
+
+    if username is None:
         return jsonify({'error': 'Missing username field'}), 400
-    elif 'friendUsername' not in data:
+    if friend_username is None:
         return jsonify({'error': 'Missing friendUsername field'}), 400
 
     try:
-        connect.query(f"DELETE FROM Friends WHERE username='{data['username']}' AND friendUsername='{data['friendUsername']}'")
-        connect.query(f"DELETE FROM Friends WHERE username='{data['friendUsername']}' AND friendUsername='{data['username']}'")
+        connect.query(f"DELETE FROM Friends WHERE username='{username}' AND friendUsername='{friend_username}'")
+        connect.query(f"DELETE FROM Friends WHERE username='{friend_username}' AND friendUsername='{username}'")
         return jsonify({'success': 'Friend removed'}), 200
     except:
         return jsonify({'error': 'Could not remove friend'}), 400
+
 
 @app.route('/api/addcourse', methods=['POST'])
 def addcourse():
@@ -496,6 +512,7 @@ def register():
         print(e)
         return jsonify({'error': 'Could not register user'}), 400
 
+
 @app.route('/api/addfriend', methods=['POST'])
 def addfriend():
     data = request.get_json() #json body
@@ -510,6 +527,7 @@ def addfriend():
         return jsonify({'success': 'Friend made'}), 200
     except:
         return jsonify({'error': 'Could not make friend'}), 400
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
