@@ -1,6 +1,11 @@
 import json
 import connect
 
+"""
+This file contains the functions to generate insert queries for the Requirements table in the database. This was used
+to populate the Courses table with data from the JSON files in the data folder, sourced from various UBC related
+websites.
+"""
 
 def generate_insert_queries(requirements_data):
     insert_queries = []

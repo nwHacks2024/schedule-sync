@@ -31,11 +31,9 @@ export default {
     async loadFriends() {
       try {
         this.loading = true;
-
+        const username = "dfroberg";
         // Make a POST request to the /friends API to get the data
-        const response = await axios.post('/api/friends', {
-          username: "dfroberg"
-        });
+        const response = await axios.get(`/api/friends?username=${username}`);
 
         // Assuming the API response is an object with a 'results' property
         this.friends = response.data;

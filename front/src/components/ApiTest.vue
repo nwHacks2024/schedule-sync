@@ -17,9 +17,8 @@
     methods: {
       async fetchUserInfo() {
         try {
-          const response = await axios.post('/api/userprofile', {
-            username: "dfroberg"
-          });
+          const username = "dfroberg";
+          const response = await axios.get(`/api/userprofile?username=${username}`);
           this.apiResponse = response.data;
           console.log('The response: ' + this.apiResponse)
         } catch (error) {

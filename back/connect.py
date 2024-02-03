@@ -1,6 +1,9 @@
 import pymysql
 import config
 
+"""
+This file contains the functions to connect to the database and run a SQL query in the database.
+"""
 
 # Connect to database and run sql query in database
 def query(sql_query: str):
